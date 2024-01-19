@@ -1,5 +1,7 @@
 body {
-    background-color: bisque;
+    background: linear-gradient(bisque, pink);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1 {
