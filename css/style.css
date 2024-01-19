@@ -5,6 +5,22 @@ body {
 }
 
 h1 {
-    color: pink; 
+    color: pink;
     font-size: 50px;
+}
+
+img {
+    margin-left: 250px;
+}
+
+button {
+    background-color: unset;
+    color: unset;
+    border-radius: 12%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
 }
