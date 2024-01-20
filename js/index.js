@@ -52,3 +52,14 @@ console.log(students);
 //------------------------------------------------------------------
 
 // User Input
+
+let username;
+
+// username = window.prompt("Enter Username");
+// console.log(`Whats up, ${username}?`);
+
+document.getElementById("submitBtn").onclick = function() {
+    username = document.getElementById("usernameTxt").value;
+    // console.log(`Welcome, ${username}`);
+    document.getElementById("myH1").textContent = `Hello ${username}!`
+}
