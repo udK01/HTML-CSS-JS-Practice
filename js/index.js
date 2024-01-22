@@ -74,16 +74,39 @@
 
 // Type Conversion
 
-let x = "pizza";
-let y = "pizza";
-let z = "pizza";
+// let x = "pizza";
+// let y = "pizza";
+// let z = "pizza";
 
-x = Number(x);
-y = String(y);
-z = Boolean(z);
+// x = Number(x);
+// y = String(y);
+// z = Boolean(z);
 
-console.log(x, typeof x);
-console.log(y, typeof y);
-console.log(z, typeof z);
+// console.log(x, typeof x);
+// console.log(y, typeof y);
+// console.log(z, typeof z);
+
+//------------------------------------------------------------------
+
+// let input = "4257235";
+// let modifiedInput = input.substring(0, input.length - 1);
+
+// console.log(modifiedInput);
+
+//------------------------------------------------------------------
+
+// const PI = 3.14;
+// let radius;
+// let circumference;
+
+// // radius = window.prompt("Enter radius.");
+// // radius = Number(radius);
+
+// document.getElementById("submitBtn").onclick = function () {
+//   radius = document.getElementById("radiusInput").value;
+//   radius = Number(radius);
+//   circumference = 2 * PI * radius;
+//   console.log(circumference.toFixed(2) + "cm");
+// };
 
 //------------------------------------------------------------------
