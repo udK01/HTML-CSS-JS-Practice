@@ -110,3 +110,17 @@
 // };
 
 //------------------------------------------------------------------
+
+// COUNTER PROGRAM
+
+let counter = document.getElementById("counter");
+
+function changeValue(x) {
+  let numCount = Number(counter.textContent);
+  numCount = Math.max(0, numCount + x);
+  counter.textContent = numCount;
+}
+
+document.getElementById("reset").onclick = function () {
+  counter.textContent = "0";
+};

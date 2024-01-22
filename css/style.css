@@ -24,3 +24,17 @@ button:hover {
     background-color: black;
     color: white;
 }
+
+#container {
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#counter {
+    font-size: 50px;
+}
