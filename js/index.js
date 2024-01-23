@@ -95,19 +95,19 @@
 
 //------------------------------------------------------------------
 
-// const PI = 3.14;
-// let radius;
-// let circumference;
+const PI = 3.14;
+let radius;
+let circumference;
 
-// // radius = window.prompt("Enter radius.");
-// // radius = Number(radius);
+// radius = window.prompt("Enter radius.");
+// radius = Number(radius);
 
-// document.getElementById("submitBtn").onclick = function () {
-//   radius = document.getElementById("radiusInput").value;
-//   radius = Number(radius);
-//   circumference = 2 * PI * radius;
-//   console.log(circumference.toFixed(2) + "cm");
-// };
+document.getElementById("submitBtn").onclick = function () {
+  radius = document.getElementById("radiusInput").value;
+  radius = Number(radius);
+  circumference = 2 * PI * radius;
+  console.log(circumference.toFixed(2) + "cm");
+};
 
 //------------------------------------------------------------------
 
@@ -159,16 +159,46 @@ myButton.onclick = function () {
 
 // IF Statements
 
-let age = 25;
-let hasLicense = true;
+// let age = 25;
+// let hasLicense = true;
 
-if (12 <= age >= 16) {
-  console.log("You are old enough to drive.");
-  if (hasLicense) {
-    console.log("You have your license.");
+// if (12 <= age >= 16) {
+//   console.log("You are old enough to drive.");
+//   if (hasLicense) {
+//     console.log("You have your license.");
+//   } else {
+//     console.log("You do not have your license, yet!");
+//   }
+// } else {
+//   console.log("You are not old enough to drive.");
+// }
+
+//------------------------------------------------------------------
+
+// Checked Property
+
+const myCheckBox = document.getElementById("myCheckBox");
+const visaBtn = document.getElementById("visaBtn");
+const masterCardBtn = document.getElementById("masterCardBtn");
+const paypalBtn = document.getElementById("paypalBtn");
+const mySubmitBtn = document.getElementById("mySubmitBtn");
+const subResult = document.getElementById("subResult");
+const paymentResult = document.getElementById("paymentResult");
+
+mySubmitBtn.onclick = function () {
+  if (myCheckBox.checked) {
+    subResult.textContent = `You are monke!`;
   } else {
-    console.log("You do not have your license, yet!");
+    subResult.textContent = `You are not monke!`;
   }
-} else {
-  console.log("You are not old enough to drive.");
-}
+
+  if (visaBtn.checked) {
+    paymentResult.textContent = `You bought Robux with Visa!`;
+  } else if (masterCardBtn.checked) {
+    paymentResult.textContent = `You bought Robux with MasterCard!`;
+  } else if (paypalBtn.checked) {
+    paymentResult.textContent = `You bought Robux with PayPal!`;
+  } else {
+    paymentResult.textContent = `You MUST select a payment type!`;
+  }
+};
