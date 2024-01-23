@@ -27,6 +27,7 @@ button:hover {
 
 #container {
     text-align: center;
+    padding: 10px;
 }
 
 .button-container {
@@ -37,4 +38,8 @@ button:hover {
 
 #counter {
     font-size: 50px;
+}
+
+.myLabels {
+    font-size: 3em;
 }
