@@ -154,3 +154,21 @@ myButton.onclick = function () {
   label2.textContent = randomNum2;
   label3.textContent = randomNum3;
 };
+
+//------------------------------------------------------------------
+
+// IF Statements
+
+let age = 25;
+let hasLicense = true;
+
+if (12 <= age >= 16) {
+  console.log("You are old enough to drive.");
+  if (hasLicense) {
+    console.log("You have your license.");
+  } else {
+    console.log("You do not have your license, yet!");
+  }
+} else {
+  console.log("You are not old enough to drive.");
+}
