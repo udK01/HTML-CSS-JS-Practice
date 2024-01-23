@@ -202,3 +202,25 @@ mySubmitBtn.onclick = function () {
     paymentResult.textContent = `You MUST select a payment type!`;
   }
 };
+
+//------------------------------------------------------------------
+
+// Ternary Operators
+
+// let age = 21;
+// let message = age >= 18 ? `You're an old monke` : `You're an adolescent monke`;
+// console.log(message);
+
+// let time = 16;
+// let greeting = time < 12 ? `Good Morning!` : `Good Afternoon!`;
+// console.log(greeting);
+
+// let isStudent = false;
+// let studentMessage = isStudent ? `You are a student` : `You are NOT a student`;
+// console.log(studentMessage);
+
+let purchaseAmount = 125;
+let discount = purchaseAmount >= 100 ? 10 : 0;
+console.log(
+  `Your total is £${purchaseAmount - (purchaseAmount * discount) / 100}!`
+);
