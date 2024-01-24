@@ -283,4 +283,55 @@ console.log(`Switch Cases: ${letterGrade}`);
 
 //------------------------------------------------------------------
 
-// Switch Case
+// String Methods
+
+let username = "monke    ";
+let phoneNumber = "123-456-7890";
+let editedPhoneNum;
+
+editedPhoneNum = phoneNumber.replace("-", "/");
+console.log(`String Methods: .replace ${editedPhoneNum}`);
+
+editedPhoneNum = phoneNumber.padStart(15, "0");
+console.log(`String Methods: .padStart ${editedPhoneNum}`);
+
+editedPhoneNum = phoneNumber.padEnd(15, "0");
+console.log(`String Methods: .padEnd ${editedPhoneNum}`);
+
+console.log(`String Methods: .ChatAt(0) = ${username.charAt(0)}`);
+console.log(`String Methods: .indexOf(n) = ${username.indexOf("n")}`);
+console.log(`String Methods: .length = ${username.length}`);
+console.log(`String Methods: .trim = ${username.trim()}`);
+console.log(`String Methods: .toUpperCase = ${username.toUpperCase()}`);
+console.log(`String Methods: .toLowerCase = ${username.toLowerCase()}`);
+console.log(`String Methods: .startsWith(" ") = ${username.startsWith(" ")}`);
+console.log(`String Methods: .endsWith(" ") = ${username.endsWith(" ")}`);
+console.log(`String Methods: .include(" ") = ${username.includes(" ")}`);
+
+//------------------------------------------------------------------
+
+// String Slicing
+
+const fullName = "Business Monke";
+
+// let firstName = fullName.slice(0, 8);
+// let lastName = fullName.slice(9, 14);
+
+let firstName = fullName.slice(0, fullName.indexOf(" "));
+let lastName = fullName.slice(fullName.indexOf(" ") + 1);
+
+let firstChar = fullName.slice(0, 1);
+let lastChar = fullName.slice(-1);
+
+console.log(`String Slicing: My Full Name Is: ${firstName} ${lastName}`);
+console.log(
+  `String Slicing: The first character in my name is ${firstChar} and the last is ${lastChar}`
+);
+
+const email = "monke@monkeLand.com";
+
+let emailUsername = email.slice(0, email.indexOf("@"));
+let extension = email.slice(email.indexOf("@") + 1);
+
+console.log(`String Slicing: ${emailUsername}`);
+console.log(`String Slicing: ${extension}`);
