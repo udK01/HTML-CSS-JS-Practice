@@ -335,3 +335,29 @@ let extension = email.slice(email.indexOf("@") + 1);
 
 console.log(`String Slicing: ${emailUsername}`);
 console.log(`String Slicing: ${extension}`);
+
+//------------------------------------------------------------------
+
+// Method Chaining
+
+// ----- NO METHOD CHAINING ----- //
+
+let chainUser = window.prompt("Enter your username: ");
+
+chainUser = chainUser.trim();
+let letter = chainUser.charAt(0);
+letter = letter.toUpperCase();
+
+let extraChars = chainUser.slice(1);
+extraChars = extraChars.toLowerCase();
+chainUser = letter + extraChars;
+
+console.log(`No Method Chaining: ${chainUser}`);
+
+// ----- METHOD CHAINING ----- //
+
+chainUser =
+  chainUser.trim().charAt(0).toUpperCase() +
+  chainUser.trim().slice(1).toLowerCase();
+
+console.log(`Method Chaining: ${chainUser}`);
