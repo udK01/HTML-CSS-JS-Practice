@@ -224,3 +224,57 @@ let discount = purchaseAmount >= 100 ? 10 : 0;
 console.log(
   `Your total is £${purchaseAmount - (purchaseAmount * discount) / 100}!`
 );
+
+//------------------------------------------------------------------
+
+// Switch Case
+
+let day = 2;
+
+switch (day) {
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  case 3:
+    console.log("Wednesday");
+    break;
+  case 4:
+    console.log("Thursday");
+    break;
+  case 5:
+    console.log("Friday");
+    break;
+  case 6:
+    console.log("Saturday");
+    break;
+  case 7:
+    console.log("Sunday");
+    break;
+  default:
+    console.log(`Invalid Day Variable "${day}"`);
+}
+
+let testScore = 66;
+let letterGrade;
+
+switch (true) {
+  case testScore >= 90:
+    letterGrade = "A";
+    break;
+  case testScore >= 80:
+    letterGrade = "B";
+    break;
+  case testScore >= 70:
+    letterGrade = "C";
+    break;
+  case testScore >= 60:
+    letterGrade = "D";
+    break;
+  default:
+    letterGrade = "F";
+}
+
+console.log(letterGrade);
