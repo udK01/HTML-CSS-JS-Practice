@@ -342,22 +342,53 @@ console.log(`String Slicing: ${extension}`);
 
 // ----- NO METHOD CHAINING ----- //
 
-let chainUser = window.prompt("Enter your username: ");
+// let chainUser = window.prompt("Enter your username: ");
 
-chainUser = chainUser.trim();
-let letter = chainUser.charAt(0);
-letter = letter.toUpperCase();
+// chainUser = chainUser.trim();
+// let letter = chainUser.charAt(0);
+// letter = letter.toUpperCase();
 
-let extraChars = chainUser.slice(1);
-extraChars = extraChars.toLowerCase();
-chainUser = letter + extraChars;
+// let extraChars = chainUser.slice(1);
+// extraChars = extraChars.toLowerCase();
+// chainUser = letter + extraChars;
 
-console.log(`No Method Chaining: ${chainUser}`);
+// console.log(`No Method Chaining: ${chainUser}`);
 
-// ----- METHOD CHAINING ----- //
+// // ----- METHOD CHAINING ----- //
 
-chainUser =
-  chainUser.trim().charAt(0).toUpperCase() +
-  chainUser.trim().slice(1).toLowerCase();
+// chainUser =
+//   chainUser.trim().charAt(0).toUpperCase() +
+//   chainUser.trim().slice(1).toLowerCase();
 
-console.log(`Method Chaining: ${chainUser}`);
+// console.log(`Method Chaining: ${chainUser}`);
+
+//------------------------------------------------------------------
+
+// Logical Operators
+
+const temp = 20;
+const isSunny = false;
+
+if (temp > 0 && temp <= 30) {
+  console.log(`Logical Operators: The weather is GOOD`);
+} else {
+  console.log(`Logical Operators: The weather is BAD`);
+}
+
+if (temp <= 0 || temp > 30) {
+  console.log(`Logical Operators: The weather is BAD`);
+} else {
+  console.log(`Logical Operators: The weather is GOOD`);
+}
+
+if (isSunny) {
+  console.log(`Logical Operators: It is SUNNY!`);
+} else {
+  console.log(`Logical Operators: It is CLOUDY!`);
+}
+
+if (!isSunny) {
+  console.log(`Logical Operators: It is CLOUDY!`);
+} else {
+  console.log(`Logical Operators: It is SUNNY!`);
+}
