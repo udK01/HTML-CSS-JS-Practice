@@ -106,7 +106,7 @@ document.getElementById("submitBtn").onclick = function () {
   radius = document.getElementById("radiusInput").value;
   radius = Number(radius);
   circumference = 2 * PI * radius;
-  console.log(circumference.toFixed(2) + "cm");
+  console.log(`Circumference: ${circumference.toFixed(2)} cm`);
 };
 
 //------------------------------------------------------------------
@@ -222,7 +222,9 @@ mySubmitBtn.onclick = function () {
 let purchaseAmount = 125;
 let discount = purchaseAmount >= 100 ? 10 : 0;
 console.log(
-  `Your total is £${purchaseAmount - (purchaseAmount * discount) / 100}!`
+  `Ternary Operators: Your total is £${
+    purchaseAmount - (purchaseAmount * discount) / 100
+  }!`
 );
 
 //------------------------------------------------------------------
@@ -233,28 +235,28 @@ let day = 2;
 
 switch (day) {
   case 1:
-    console.log("Monday");
+    console.log("Switch Cases: Monday");
     break;
   case 2:
-    console.log("Tuesday");
+    console.log("Switch Cases: Tuesday");
     break;
   case 3:
-    console.log("Wednesday");
+    console.log("Switch Cases: Wednesday");
     break;
   case 4:
-    console.log("Thursday");
+    console.log("Switch Cases: Thursday");
     break;
   case 5:
-    console.log("Friday");
+    console.log("Switch Cases: Friday");
     break;
   case 6:
-    console.log("Saturday");
+    console.log("Switch Cases: Saturday");
     break;
   case 7:
-    console.log("Sunday");
+    console.log("Switch Cases: Sunday");
     break;
   default:
-    console.log(`Invalid Day Variable "${day}"`);
+    console.log(`Switch Cases: Invalid Day Variable "${day}"`);
 }
 
 let testScore = 66;
@@ -277,4 +279,8 @@ switch (true) {
     letterGrade = "F";
 }
 
-console.log(letterGrade);
+console.log(`Switch Cases: ${letterGrade}`);
+
+//------------------------------------------------------------------
+
+// Switch Case
