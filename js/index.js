@@ -563,3 +563,22 @@ console.log(`Functions IsEven: ${isEven(3)}`);
 console.log(
   `Functions IsValidEmail: ${isValidEmail("monke@businessMonke.com")}`
 );
+
+//------------------------------------------------------------------
+
+// Variable Scope
+
+let x = 3;
+
+function function1() {
+  let x = 1;
+  console.log(`Variable Scope: ${x}`);
+}
+
+function function2() {
+  let x = 2;
+  console.log(`Variable Scope: ${x}`);
+}
+
+function1();
+function2();
