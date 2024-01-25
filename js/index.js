@@ -431,3 +431,53 @@ if (PI !== "3.14") {
 //------------------------------------------------------------------
 
 // While Loops
+
+// let whileUsername = "";
+
+// while (whileUsername === "" || whileUsername === null) {
+//   whileUsername = window.prompt(`Enter your name.`);
+// }
+
+// console.log(`Hello ${whileUsername}`);
+
+// let doWhileUsername;
+
+// do {
+//   doWhileUsername = window.prompt(`Enter your name.`);
+// } while (doWhileUsername === "" || doWhileUsername === null);
+
+// console.log(`Hello ${doWhileUsername}`);
+
+// let loggedIn = false;
+// let loginUsername;
+// let longinPassword;
+
+// while (!loggedIn) {
+//   loginUsername = window.prompt(`Enter your username.`);
+//   longinPassword = window.prompt(`Enter your password.`);
+
+//   if (loginUsername === `admin` && longinPassword === `password`) {
+//     loggedIn = true;
+//     console.log(`You are logged in!`);
+//   } else {
+//     console.log(`Invalid credentials! Please try again.`);
+//   }
+// }
+
+// For Loops
+
+for (let i = 0; i <= 10; i++) {
+  if (i == 7) {
+    continue;
+  }
+
+  console.log(`i: ${i}`);
+}
+
+for (let i = 0; i <= 5; i++) {
+  if (i == 3) {
+    break;
+  }
+
+  console.log(`i: ${i}`);
+}
