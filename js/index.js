@@ -486,31 +486,80 @@ for (let i = 0; i <= 5; i++) {
 
 // Number Guessing Game
 
-const minNum = 1;
-const maxNum = 100;
-const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+// const minNum = 1;
+// const maxNum = 100;
+// const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 
-let attempts = 0;
-let guess;
-let running = true;
+// let attempts = 0;
+// let guess;
+// let running = true;
 
-while (running) {
-  guess = window.prompt(`Guess a number between ${minNum} - ${maxNum}.`);
-  guess = Number(guess);
+// while (running) {
+//   guess = window.prompt(`Guess a number between ${minNum} - ${maxNum}.`);
+//   guess = Number(guess);
 
-  if (isNaN(guess) || guess < minNum || guess > maxNum) {
-    window.alert(`Please enter a valid number!`);
-  } else {
-    attempts++;
-    if (guess < answer) {
-      window.alert(`TOO LOW! TRY AGAIN`);
-    } else if (guess > answer) {
-      window.alert(`TOO HIGH! TRY AGAIN`);
-    } else {
-      window.alert(
-        `CORRECT! The answer was ${answer}. It took you ${attempts} attempts.`
-      );
-      running = false;
-    }
-  }
+//   if (isNaN(guess) || guess < minNum || guess > maxNum) {
+//     window.alert(`Please enter a valid number!`);
+//   } else {
+//     attempts++;
+//     if (guess < answer) {
+//       window.alert(`TOO LOW! TRY AGAIN`);
+//     } else if (guess > answer) {
+//       window.alert(`TOO HIGH! TRY AGAIN`);
+//     } else {
+//       window.alert(
+//         `CORRECT! The answer was ${answer}. It took you ${attempts} attempts.`
+//       );
+//       running = false;
+//     }
+//   }
+// }
+
+//------------------------------------------------------------------
+
+// Functions
+
+function happyBirthday(birthdayName, age) {
+  console.log(`Functions: Happy Birthday To You!`);
+  console.log(`Functions: Happy Birthday To You!`);
+  console.log(`Functions: Happy Birthday To Dear ${birthdayName}!`);
+  console.log(`Functions: Happy Birthday To You!`);
+  console.log(`Functions: You are ${age}  years old!`);
 }
+
+function add(x, y) {
+  return x + y;
+}
+
+function subtract(x, y) {
+  return x - y;
+}
+
+function multiply(x, y) {
+  return x * y;
+}
+
+function divide(x, y) {
+  return x / y;
+}
+
+function isEven(number) {
+  return number % 2 === 0;
+}
+
+function isValidEmail(email) {
+  return email.includes(`@`);
+}
+
+happyBirthday("Bob", 9);
+happyBirthday("Jake", 12);
+happyBirthday("James", 14);
+
+console.log(`Functions Add: ${add(2, 3)}`);
+console.log(`Functions Subtract: ${subtract(2, 3)}`);
+console.log(`Functions Multiply: ${multiply(2, 3)}`);
+console.log(`Functions Divide: ${divide(2, 3)}`);
+console.log(`Functions IsEven: ${isEven(3)}`);
+console.log(
+  `Functions IsValidEmail: ${isValidEmail("monke@businessMonke.com")}`
+);
