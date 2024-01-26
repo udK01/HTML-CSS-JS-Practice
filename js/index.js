@@ -582,3 +582,24 @@ function function2() {
 
 function1();
 function2();
+
+//------------------------------------------------------------------
+
+// Temperature Converter
+
+const temperatureInput = document.getElementById("temperatureInput");
+const toFahrenheit = document.getElementById("toFahrenheit");
+const toCelsius = document.getElementById("toCelsius");
+const result = document.getElementById("result");
+
+function convert() {
+  if (toFahrenheit.checked) {
+    result.textContent =
+      Number((temperatureInput.value * 9) / 5 + 32).toFixed(1) + "°F";
+  } else if (toCelsius.checked) {
+    result.textContent =
+      Number((temperatureInput.value - 32) * (5 / 9)).toFixed(1) + "°C";
+  } else {
+    result.textContent = "Select a unit";
+  }
+}

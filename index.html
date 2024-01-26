@@ -65,6 +65,21 @@
     <p id="subResult"></p>
     <p id="paymentResult"></p>
 
+    <form>
+        <h1>Temperature Converter</h1>
+        <input type="number" id="temperatureInput" value="0"><br>
+
+        <input type="radio" id="toFahrenheit" name="unit">
+        <label for="toFahrenheit">Celsius ➡ Fahrenheit</label><br>
+
+        <input type="radio" id="toCelsius" name="unit">
+        <label for="toCelsius">Fahrenheit ➡ Celsius</label><br><br>
+
+        <button type="button" onclick="convert()">submit</button>
+        <p id="result"></p>
+    </form>
+
+
     <script src="js/index.js"></script>
 
 </body>
