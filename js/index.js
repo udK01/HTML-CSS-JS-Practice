@@ -672,3 +672,20 @@ for (let row of matrix) {
 //------------------------------------------------------------------
 
 // Spread Operator
+
+let numbers = [1, 2, 3, 4, 5];
+let spreadUsername = `monke business`;
+let fruitsArr = ["apple", "orange", "banana"];
+let newFruits = [...fruitsArr];
+let vegetables = ["carrots", "celery", "potatoes"];
+let foods = [...fruits, ...vegetables, "eggs", "milk"];
+
+let maximum = Math.max(...numbers);
+let minimum = Math.min(...numbers);
+let letters = [...spreadUsername].join(`.`);
+
+console.log(`Spread Operator: Maximum Number: ${maximum}`);
+console.log(`Spread Operator: Minimum Number: ${minimum}`);
+console.log(`Spread Operator: Spread Username: ${letters}`);
+console.log(`Spread Operator: New Fruits: ${newFruits}`);
+console.log(`Spread Operator: Foods: ${foods}`);
