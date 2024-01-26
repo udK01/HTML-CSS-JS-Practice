@@ -603,3 +603,41 @@ function convert() {
     result.textContent = "Select a unit";
   }
 }
+
+//------------------------------------------------------------------
+
+// Arrays
+
+let fruits = ["banana", "orange", "strawberry"];
+
+// fruits[3] = "coconut";
+// fruits.push("coconut");
+// fruits.pop();
+// fruits.unshift("mango");
+// fruits.shift("mango");
+
+let numOfFruits = fruits.length;
+let index = fruits.indexOf("banana");
+
+console.log(`Arrays: ${fruits}`);
+console.log(`Arrays: ${fruits[0]}`);
+console.log(`Arrays: ${fruits[1]}`);
+console.log(`Arrays: ${fruits[2]}`);
+console.log(`Arrays: ${fruits[3]}`);
+console.log(`Arrays: Number Of Fruits: ${numOfFruits}`);
+console.log(`Arrays: Search For Banana's Index: ${index}`);
+
+// fruits.sort();
+// fruits.sort().reverse;
+
+for (let i = 0; i < fruits.length; i++) {
+  console.log(`Arrays: Array Loop: ${fruits[i]}`);
+}
+
+for (let i = fruits.length - 1; i >= 0; i--) {
+  console.log(`Arrays: Reverse: ${fruits[i]}`);
+}
+
+for (let fruit of fruits) {
+  console.log(fruit);
+}
