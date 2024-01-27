@@ -72,3 +72,28 @@ label {
     font-size: 1.75em;
     font-weight: bold;
 }
+
+#dice {
+    width: 10%;
+    margin: 5px;
+}
+
+#diceResults {
+    font-weight: bold;
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+#diceInput {
+    width: 40%;
+    text-align: center;
+    font-size: 2em;
+    border: 2px solid hsl(0, 0%, 0%, 0.8);
+    border-radius: 4px;
+}
+
+#diceImages {
+    display: flex;
+    max-width: 350px;
+    flex-wrap: wrap;
+}

@@ -744,3 +744,29 @@ function combineStrings(...strings) {
 const combinedName = combineStrings("Mr.", "Banana", "Circular", "III");
 
 console.log(`Rest Parameters: ${combinedName}`);
+
+//------------------------------------------------------------------
+
+// Dice Roller
+
+function rollDice() {
+  const diceInput = document.getElementById("diceInput").value;
+  const diceResults = document.getElementById("diceResults");
+  const diceImages = document.getElementById("diceImages");
+  const max = 6;
+  const min = 1;
+
+  let diceResultsArr = [];
+  let diceImagesArr = [];
+
+  for (let i = 0; i < diceInput; i++) {
+    const value = Math.floor(Math.random() * max) + min;
+    diceResultsArr[i] = value;
+    diceImagesArr[i] = `<img id="dice" src="./images/${value}.png">`;
+  }
+
+  diceResults.textContent = `Dice: ${diceResultsArr}`;
+  diceImages.innerHTML = diceImagesArr.join(" ");
+
+  // console.log(`Dice Input: ${diceInput}, Current Rolls: ${diceResultsArr}`);
+}
