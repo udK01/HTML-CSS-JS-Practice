@@ -840,3 +840,44 @@ console.log(
 //------------------------------------------------------------------
 
 // Call Back
+
+// function hello() {
+//   setTimeout(function () {
+//     console.log(`Call Back: Hello!`);
+//   }, 3000);
+// }
+
+// function hello(callback) {
+//   console.log(`Call Back: Hello!`);
+//   callback();
+// }
+
+// function wait() {
+//   console.log(`Call Back: Wait!`);
+// }
+
+// function leave() {
+//   console.log(`Call Back: Leave!`);
+// }
+
+// function goodbye() {
+//   console.log(`Call Back: Good Bye!`);
+// }
+
+// hello(wait);
+
+function sum(callback, x, y) {
+  let sumResult = x + y;
+  callback(sumResult);
+}
+
+function displayConsole(sumResult) {
+  console.log(`Call Back: ${sumResult}`);
+}
+
+function displayPage(sumResult) {
+  document.getElementById("callbackH2").textContent = sumResult;
+}
+
+sum(displayConsole, 1, 2);
+sum(displayPage, 1, 2);

@@ -97,3 +97,8 @@ label {
     max-width: 350px;
     flex-wrap: wrap;
 }
+
+#callbackResult {
+    display: flex; 
+    margin-top: 10px;
+}
