@@ -770,3 +770,73 @@ function rollDice() {
 
   // console.log(`Dice Input: ${diceInput}, Current Rolls: ${diceResultsArr}`);
 }
+
+//------------------------------------------------------------------
+
+// Random Password Generator
+
+function generatePassword(
+  length,
+  includeLowercase,
+  includeUppercase,
+  includeNumbers,
+  includeSymbols
+) {
+  const lowChars = `abcdefghijklmnopqrstuvwxyz`;
+  const upChars = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
+  const numberChars = `0123456789`;
+  const symbolChars = `!"£$%^&*()_-+=?><,./`;
+  let allowedChars = ``;
+  let password = ``;
+
+  // if (includeLowercase) {
+  //   allowedChars += lowChars;
+  // }
+
+  // if (includeUppercase) {
+  //   allowedChars += upChars;
+  // }
+
+  // if (includeNumbers) {
+  //   allowedChars += numberChars;
+  // }
+
+  // if (includeSymbols) {
+  //   allowedChars += symbolChars;
+  // }
+
+  allowedChars += includeLowercase ? lowChars : ``;
+  allowedChars += includeUppercase ? upChars : ``;
+  allowedChars += includeNumbers ? numberChars : ``;
+  allowedChars += includeSymbols ? symbolChars : ``;
+
+  for (let i = 0; i < length; i++) {
+    password += allowedChars.charAt(
+      Math.floor(Math.random() * allowedChars.length)
+    );
+  }
+
+  return password;
+}
+
+const passwordLength = 10;
+const includeLowercase = true;
+const includeUppercase = true;
+const includeNumbers = true;
+const includeSymbols = false;
+
+const generatedPassword = generatePassword(
+  passwordLength,
+  includeLowercase,
+  includeUppercase,
+  includeNumbers,
+  includeSymbols
+);
+
+console.log(
+  `Random Password Generator: ${generatedPassword}, password length: ${generatedPassword.length}`
+);
+
+//------------------------------------------------------------------
+
+// Call Back
