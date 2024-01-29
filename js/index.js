@@ -881,3 +881,65 @@ function displayPage(sumResult) {
 
 sum(displayConsole, 1, 2);
 sum(displayPage, 1, 2);
+
+//------------------------------------------------------------------
+
+// For Each
+
+// let numbersArr = [1, 2, 3, 4, 5];
+
+// function double(element, index, array) {
+//   array[index] = element * 2;
+// }
+
+// function triple(element, index, array) {
+//   array[index] = element * 3;
+// }
+
+// function square(element, index, array) {
+//   array[index] = Math.pow(element, 2);
+// }
+
+// function cube(element, index, array) {
+//   array[index] = Math.pow(element, 3);
+// }
+
+// function displayNumbers(element) {
+//   console.log(`For Each: ${element}`);
+// }
+
+// numbersArr.forEach(double);
+// numbersArr.forEach(triple);
+// numbersArr.forEach(square);
+// numbersArr.forEach(cube);
+// numbersArr.forEach(displayNumbers);
+
+let forEachFruits = [`apple`, `orange`, `banana`, `coconut`];
+let forEachFruitsUp = [`APPLE`, `ORANGE`, `BANANA`, `COCONUT`];
+
+function display(element) {
+  console.log(element);
+}
+
+function upperCase(element, index, array) {
+  array[index] = element.toUpperCase();
+}
+
+function lowerCase(element, index, array) {
+  array[index] = element.toLowerCase();
+}
+
+function capitaliseFirst(element, index, array) {
+  array[index] =
+    element.charAt(0).toUpperCase() + element.slice(1, element.length);
+}
+
+// forEachFruits.forEach(upperCase);
+forEachFruits.forEach(capitaliseFirst);
+forEachFruitsUp.forEach(lowerCase);
+forEachFruits.forEach(display);
+forEachFruitsUp.forEach(display);
+
+//------------------------------------------------------------------
+
+// Map
