@@ -918,7 +918,7 @@ let forEachFruits = [`apple`, `orange`, `banana`, `coconut`];
 let forEachFruitsUp = [`APPLE`, `ORANGE`, `BANANA`, `COCONUT`];
 
 function display(element) {
-  console.log(element);
+  console.log(`For Each: ${element}`);
 }
 
 function upperCase(element, index, array) {
@@ -943,3 +943,52 @@ forEachFruitsUp.forEach(display);
 //------------------------------------------------------------------
 
 // Map
+
+// Example 1.
+
+// const mapNumbers = [1, 2, 3, 4, 5];
+// const squares = mapNumbers.map(cube);
+
+// function square(element) {
+//   return Math.pow(element, 2);
+// }
+
+// function cube(element) {
+//   return Math.pow(element, 3);
+// }
+
+// console.log(`Map: ${squares}`);
+
+// Example 2.
+
+// const students = [`Spongebob`, `Patrick`, `Squidward`, `Sandy`];
+// const studentsUpper = students.map(upperCase);
+// const studentsLower = students.map(lowerCase);
+
+// function upperCase(element) {
+//   return element.toUpperCase();
+// }
+
+// function lowerCase(element) {
+//   return element.toLowerCase();
+// }
+
+// console.log(`Map: ${studentsUpper}`);
+// console.log(`Map: ${studentsLower}`);
+
+// Example 3.
+
+const dates = [`2024-1-10`, `2025-2-20`, `2026-3-30`];
+const formattedDates = dates.map(formatDates);
+
+function formatDates(element) {
+  const parts = element.split("-");
+  return `${parts[1]}/${parts[2]}/${parts[0]}`;
+}
+
+console.log(`Map, Unformatted Dates: ${dates}`);
+console.log(`Map, Formatted Dates: ${formattedDates}`);
+
+//------------------------------------------------------------------
+
+// Filter
