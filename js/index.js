@@ -1078,4 +1078,40 @@ console.log(`Reduce: ${maxValue}`);
 
 //------------------------------------------------------------------
 
-// Reduce
+// Function Expression
+
+// const hello = function () {
+//   console.log(`Hello!`);
+// };
+
+// setTimeout(function () {
+//   console.log(`Hello!`);
+// }, 3000);
+
+const funcNumbers = [1, 2, 3, 4, 5, 6];
+
+const squares = funcNumbers.map(function (element) {
+  return Math.pow(element, 2);
+});
+
+const cubes = funcNumbers.map(function (element) {
+  return Math.pow(element, 3);
+});
+
+const evenNumbers = funcNumbers.filter(function (element) {
+  return element % 2 === 0;
+});
+
+const oddNumbers = funcNumbers.filter(function (element) {
+  return element % 2 !== 0;
+});
+
+const total = funcNumbers.reduce(function (accumulator, element) {
+  return accumulator + element;
+});
+
+console.log(`Function Expression: ${squares}`);
+console.log(`Function Expression: ${cubes}`);
+console.log(`Function Expression: ${evenNumbers}`);
+console.log(`Function Expression: ${oddNumbers}`);
+console.log(`Function Expression: ${total}`);
