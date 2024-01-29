@@ -1047,3 +1047,35 @@ console.log(`Filter: ${longWords}`);
 //------------------------------------------------------------------
 
 // Reduce
+
+// Example 1.
+
+// const prices = [5, 30, 10, 25, 15, 20];
+// const total = prices.reduce(sumPrices);
+
+// function sumPrices(accumulator, element) {
+//   return accumulator + element;
+// }
+
+// console.log(`Reduce: £${total.toFixed(2)}`);
+
+// Example 2.
+
+const grades = [75, 50, 90, 80, 65, 95];
+const minValue = grades.reduce(getMin);
+const maxValue = grades.reduce(getMax);
+
+function getMin(accumulator, element) {
+  return Math.min(accumulator, element);
+}
+
+function getMax(accumulator, element) {
+  return Math.max(accumulator, element);
+}
+
+console.log(`Reduce: ${minValue}`);
+console.log(`Reduce: ${maxValue}`);
+
+//------------------------------------------------------------------
+
+// Reduce
