@@ -1115,3 +1115,45 @@ console.log(`Function Expression: ${cubes}`);
 console.log(`Function Expression: ${evenNumbers}`);
 console.log(`Function Expression: ${oddNumbers}`);
 console.log(`Function Expression: ${total}`);
+
+//------------------------------------------------------------------
+
+// Arrow Functions
+
+// function hello() {
+//   console.log(`Arrow Functions: Hello!`);
+// }
+
+// hello();
+
+const hello = (name, age) => {
+  console.log(`Arrow Functions: Hello, ${name}!`);
+  console.log(`Arrow Functions: You are ${age} years old.`);
+};
+
+hello(`Monke`, 8);
+
+// setTimeout(function () {
+//   console.log(`Arrow Function: Hello!`);
+// }, 3000);
+
+// setTimeout(() => console.log(`Arrow Functions: Hello!`), 3000);
+
+const arrowNumbers = [1, 2, 3, 4, 5, 6];
+const squareArrows = arrowNumbers.map((element) => Math.pow(element, 2));
+const cubeArrows = arrowNumbers.map((element) => Math.pow(element, 3));
+const evenArrowNums = arrowNumbers.filter((element) => element % 2 === 0);
+const oddArrowNums = arrowNumbers.filter((element) => element % 2 !== 0);
+const totalArrows = arrowNumbers.reduce(
+  (accumulator, element) => accumulator + element
+);
+
+console.log(`Arrow Functions: ${squareArrows}`);
+console.log(`Arrow Functions: ${cubeArrows}`);
+console.log(`Arrow Functions: ${evenArrowNums}`);
+console.log(`Arrow Functions: ${oddArrowNums}`);
+console.log(`Arrow Functions: ${totalArrows}`);
+
+//------------------------------------------------------------------
+
+// JavaScript Objects
