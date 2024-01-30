@@ -1157,3 +1157,38 @@ console.log(`Arrow Functions: ${totalArrows}`);
 //------------------------------------------------------------------
 
 // JavaScript Objects
+
+const person1 = {
+  personFirstName: `Spongebob`,
+  personLastName: `Squarepants`,
+  age: 30,
+  isEmployed: true,
+  sayHello: () => console.log(`JavaScript Objects: Hi! I am Spongebob!`),
+  eat: () => console.log(`JavaScript Objects: I am eating a Krabby Patty!`),
+};
+
+const person2 = {
+  personFirstName: `Patrick`,
+  personLastName: `Star`,
+  age: 42,
+  isEmployed: false,
+  sayHello: () => console.log(`JavaScript Objects: No! This is Patrick!`),
+  eat: () => console.log(`JavaScript Objects: I am eating Sandy's Cheeks!`),
+};
+
+console.log(
+  `JavaScript Objects: ${person1.personFirstName}, ${person1.personLastName}, ${person1.age}, ${person1.isEmployed}`
+);
+console.log(
+  `JavaScript Objects: ${person2.personFirstName}, ${person2.personLastName}, ${person2.age}, ${person2.isEmployed}`
+);
+
+person1.sayHello();
+person2.sayHello();
+
+person1.eat();
+person2.eat();
+
+//------------------------------------------------------------------
+
+// JavaScript Objects
