@@ -1191,4 +1191,35 @@ person2.eat();
 
 //------------------------------------------------------------------
 
-// JavaScript Objects
+// JavaScript `.this`
+
+const person3 = {
+  name: `Spongebob`,
+  favFood: `Krabby Patty`,
+  sayHello: function () {
+    console.log(`.this: Hello! I am ${this.favFood}`);
+  },
+  eat: function () {
+    console.log(`.this: ${this.name} is eating ${this.favFood}`);
+  },
+};
+
+const person4 = {
+  name: `Patrick`,
+  favFood: `Mr. Krabs Juicy Patties`,
+  sayHello: function () {
+    console.log(`.this: Hello! I am ${this.favFood}`);
+  },
+  eat: function () {
+    console.log(`.this: ${this.name} is eating ${this.favFood}`);
+  },
+};
+
+person3.sayHello();
+person3.eat();
+person4.sayHello();
+person4.eat();
+
+//------------------------------------------------------------------
+
+// Constructor
