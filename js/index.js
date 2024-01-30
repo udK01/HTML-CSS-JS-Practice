@@ -1223,3 +1223,35 @@ person4.eat();
 //------------------------------------------------------------------
 
 // Constructor
+
+function Car(make, model, year, colour) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.colour = colour;
+  this.drive = function () {
+    console.log(`Constructor: You drive the ${this.make} ${this.model}`);
+  };
+}
+
+const c1 = new Car(`Ford`, `Mustang`, `2024`, `red`);
+const c2 = new Car(`Chevrolet`, `Camaro`, `2025`, `blue`);
+const c3 = new Car(`Dodge`, `Charger`, `2026`, `silver`);
+
+console.log(`Constructor: ${c1.make}`);
+console.log(`Constructor: ${c1.model}`);
+console.log(`Constructor: ${c1.year}`);
+console.log(`Constructor: ${c1.colour}`);
+c1.drive();
+
+console.log(`Constructor: ${c2.make}`);
+console.log(`Constructor: ${c2.model}`);
+console.log(`Constructor: ${c2.year}`);
+console.log(`Constructor: ${c2.colour}`);
+c2.drive();
+
+console.log(`Constructor: ${c3.make}`);
+console.log(`Constructor: ${c3.model}`);
+console.log(`Constructor: ${c3.year}`);
+console.log(`Constructor: ${c3.colour}`);
+c3.drive();
