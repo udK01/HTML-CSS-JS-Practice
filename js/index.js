@@ -1255,3 +1255,45 @@ console.log(`Constructor: ${c3.model}`);
 console.log(`Constructor: ${c3.year}`);
 console.log(`Constructor: ${c3.colour}`);
 c3.drive();
+
+//------------------------------------------------------------------
+
+// Classes
+
+class Product {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+
+  displayProduct() {
+    console.log(`Classes: Product: ${this.name}`);
+    console.log(`Classes: Product: £${this.price.toFixed(2)}`);
+  }
+
+  calculateTotal(salexTax) {
+    return this.price + this.price * salexTax;
+  }
+}
+
+const salesTax = 0.05;
+
+const product1 = new Product(`Shirt`, 19.99);
+const product2 = new Product(`Pants`, 22.5);
+const product3 = new Product(`Underwar`, 100.0);
+
+product1.displayProduct();
+product2.displayProduct();
+product3.displayProduct();
+
+const totalProduct1 = product1.calculateTotal(salesTax);
+const totalProduct2 = product2.calculateTotal(salesTax);
+const totalProduct3 = product3.calculateTotal(salesTax);
+
+console.log(`Total price (with tax): £${totalProduct1.toFixed(2)}`);
+console.log(`Total price (with tax): £${totalProduct2.toFixed(2)}`);
+console.log(`Total price (with tax): £${totalProduct3.toFixed(2)}`);
+
+//------------------------------------------------------------------
+
+// Static Keyword
