@@ -1297,3 +1297,63 @@ console.log(`Total price (with tax): £${totalProduct3.toFixed(2)}`);
 //------------------------------------------------------------------
 
 // Static Keyword
+
+// Example 1.
+
+class MathUtil {
+  static PI = 3.14159;
+
+  static getDiameter(radius) {
+    return radius * 2;
+  }
+
+  static getCircumference(radius) {
+    return 2 * this.PI * radius;
+  }
+
+  static getArea(radius) {
+    return this.PI * Math.pow(radius, 2);
+  }
+}
+
+console.log(`Static Keyword: ${MathUtil.PI}`);
+console.log(`Static Keyword: ${MathUtil.getDiameter(10)}`);
+console.log(`Static Keyword: ${MathUtil.getCircumference(10)}`);
+console.log(`Static Keyword: ${MathUtil.getArea(10)}`);
+
+// Example 2.
+
+class User {
+  static userCount = 0;
+
+  constructor(username) {
+    this.username = username;
+    User.userCount++;
+  }
+
+  static getUserCount() {
+    console.log(`Static Keyword: There are ${User.userCount} users online.`);
+  }
+
+  sayHello() {
+    console.log(`Static Keyword: Hello, my username is ${this.username}`);
+  }
+}
+
+const user1 = new User(`Spongebob`);
+const user2 = new User(`Patrick`);
+const user3 = new User(`Sandy`);
+
+console.log(`Static Keyword: ${user1.username}`);
+console.log(`Static Keyword: ${user2.username}`);
+console.log(`Static Keyword: ${user3.username}`);
+
+user1.sayHello();
+user2.sayHello();
+user3.sayHello();
+
+User.getUserCount();
+
+//------------------------------------------------------------------
+
+// Inheritance
