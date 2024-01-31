@@ -1357,3 +1357,62 @@ User.getUserCount();
 //------------------------------------------------------------------
 
 // Inheritance
+
+class Animal {
+  alive = true;
+
+  eat() {
+    console.log(`Inheritance: This ${this.name} is eating.`);
+  }
+
+  sleep() {
+    console.log(`Inheritance: This ${this.name} is sleeping.`);
+  }
+}
+
+class Rabbit extends Animal {
+  name = "Rabbit";
+
+  run() {
+    console.log(`Inheritance: This ${this.name} is running.`);
+  }
+}
+
+class Fish extends Animal {
+  name = "Fish";
+
+  swim() {
+    console.log(`Inheritance: This ${this.name} is swimming.`);
+  }
+}
+
+class Hawk extends Animal {
+  name = "Hawk";
+
+  fly() {
+    console.log(`Inheritance: This ${this.name} is flying.`);
+  }
+}
+
+const r1 = new Rabbit();
+const f1 = new Fish();
+const h1 = new Hawk();
+
+console.log(`Inheritance: ${r1.alive}`);
+r1.eat();
+r1.sleep();
+r1.run();
+
+console.log(`Inheritance: ${f1.alive}`);
+f1.eat();
+f1.sleep();
+f1.swim();
+
+console.log(`Inheritance: ${h1.alive}`);
+h1.eat();
+h1.sleep();
+h1.fly();
+
+//------------------------------------------------------------------
+
+// Super Keyword
