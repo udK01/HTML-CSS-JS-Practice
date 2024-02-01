@@ -1771,3 +1771,58 @@ console.log(`Nested-Objects: ${person18.address.country}`);
 //------------------------------------------------------------------
 
 // Arrays of Objects
+
+const fruits1 = [
+  { name: `apple`, color: `red`, calories: 95 },
+  { name: `orange`, color: `orange`, calories: 45 },
+  { name: `banana`, color: `yellow`, calories: 105 },
+  { name: `coconut`, color: `white`, calories: 159 },
+  { name: `pineapple`, color: `yellow`, calories: 37 },
+];
+
+console.log(`Arrays of Objects: ${fruits1[0].name}`);
+console.log(`Arrays of Objects: ${fruits1[0].color}`);
+console.log(`Arrays of Objects: ${fruits1[0].calories}`);
+
+// Add Object
+fruits1.push({ name: `grapes`, color: `purple`, calories: 62 });
+console.log(fruits1);
+
+// Remove Object
+// fruits1.pop();
+// console.log(fruits1);
+
+// Remove Specific Object
+// fruits1.splice(1, 2);
+// console.log(fruits1);
+
+fruits1.forEach((fruit) => console.log(fruit.name));
+
+const fruitNames = fruits1.map((fruit) => fruit.name);
+console.log(fruitNames);
+
+const fruitColors = fruits1.map((fruit) => fruit.color);
+console.log(fruitColors);
+
+const fruitCalories = fruits1.map((fruit) => fruit.calories);
+console.log(fruitCalories);
+
+const yellowFruits = fruits1.filter((fruit) => fruit.color === `yellow`);
+console.log(yellowFruits);
+
+const lowCalFruits = fruits1.filter((fruit) => fruit.calories < 100);
+console.log(lowCalFruits);
+
+const highCalFruits = fruits1.filter((fruit) => fruit.calories > 100);
+console.log(highCalFruits);
+
+const maxFruit = fruits1.reduce((max, fruit) =>
+  fruit.calories > max.calories ? fruit : max
+);
+
+const minFruit = fruits1.reduce((min, fruit) =>
+  fruit.calories < min.calories ? fruit : min
+);
+
+console.log(maxFruit);
+console.log(minFruit);
