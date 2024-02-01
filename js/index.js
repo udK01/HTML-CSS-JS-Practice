@@ -1826,3 +1826,34 @@ const minFruit = fruits1.reduce((min, fruit) =>
 
 console.log(maxFruit);
 console.log(minFruit);
+
+//------------------------------------------------------------------
+
+// Sorting
+
+// let fruits3 = [`apple`, `orange`, `banana`, `coconut`, `pineapple`];
+// let numbers2 = [1, 10, 2, 9, 3, 8, 4, 7, 5, 6];
+
+// fruits3.sort();
+// numbers2.sort((a, b) => b - a);
+
+// console.log(`Sorting: ${fruits3}`);
+// console.log(`Sorting: ${numbers2}`);
+
+const people = [
+  { name: `Spongebob`, age: 30, gpa: 3.0 },
+  { name: `Patrick`, age: 37, gpa: 1.5 },
+  { name: `Squidward`, age: 51, gpa: 2.5 },
+  { name: `Sandy`, age: 27, gpa: 4.0 },
+];
+
+// people.sort((a, b) => a.age - b.age); // Numerical Ascending Order
+// people.sort((a, b) => b.age - a.age); // Numerical Descending Order
+people.sort((a, b) => a.name.localeCompare(b.name)); // Forward Order
+// people.sort((a, b) => b.name.localeCompare(a.name)); // Reverse Order
+
+console.log(people);
+
+//------------------------------------------------------------------
+
+// Sorting
