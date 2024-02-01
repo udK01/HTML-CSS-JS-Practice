@@ -1594,4 +1594,88 @@ console.log(person.age);
 
 //------------------------------------------------------------------
 
-// Destructing
+// Destructuring
+
+// ---------- Example 1 ----------
+// SWAP THE VALUE OF TWO VARIABLES
+
+let a = 1;
+let b = 2;
+
+[a, b] = [b, a];
+
+console.log(`Destructuring: ${a}`);
+console.log(`Destructuring: ${b}`);
+
+// ---------- Example 2 ----------
+// SWAP 2 ELEMENTS IN AN ARRAY
+
+const colors = [`red`, `green`, `blue`, `black`, `white`];
+
+[colors[0], colors[4]] = [colors[4], colors[0]];
+
+console.log(`Destructuring: ${colors}`);
+
+// ---------- Example 3 ----------
+// ASSIGN ARRAY ELEMENTS TO VARIABLES
+
+const colors1 = [`red`, `green`, `blue`, `black`, `white`];
+
+const [firstColor, secondColor, thirdColor, ...extraColors] = colors1;
+
+console.log(`Destructuring: ${firstColor}`);
+console.log(`Destructuring: ${secondColor}`);
+console.log(`Destructuring: ${thirdColor}`);
+console.log(`Destructuring: ${extraColors}`);
+
+// ---------- Example 4 ----------
+// EXTRACT VALUES FROM OBJECTS
+
+const person11 = {
+  firstName2: `Spongebob`,
+  lastName2: `Squarepants`,
+  age2: 30,
+  job2: `Fry Cook`,
+};
+
+const person12 = {
+  firstName2: `Patrick`,
+  lastName2: `Star`,
+  age2: 34,
+};
+
+const { firstName2, lastName2, age2, job2 = `Unemployed` } = person12;
+
+console.log(`Destructuring: ${firstName2}`);
+console.log(`Destructuring: ${lastName2}`);
+console.log(`Destructuring: ${age2}`);
+console.log(`Destructuring: ${job2}`);
+
+// ---------- Example 5 ----------
+// DESTRUCTURE IN FUNCTION PARAMETERS
+
+function displayPerson({ firstName3, lastName3, age3, job3 = `Unemployed` }) {
+  console.log(`Destructuring: name: ${firstName3} ${lastName3}`);
+  console.log(`Destructuring: age: ${age3}`);
+  console.log(`Destructuring: job: ${job3}`);
+}
+
+const person13 = {
+  firstName3: `Spongebob`,
+  lastName3: `Squarepants`,
+  age3: 30,
+  job3: `Fry Cook`,
+};
+
+const person14 = {
+  firstName3: `Patrick`,
+  lastName3: `Star`,
+  age3: 34,
+};
+
+displayPerson(person13);
+displayPerson(person14);
+
+//------------------------------------------------------------------
+
+// Nested-Objects
