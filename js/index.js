@@ -1679,3 +1679,95 @@ displayPerson(person14);
 //------------------------------------------------------------------
 
 // Nested-Objects
+
+// Example 1
+
+const person15 = {
+  fullName: `Spongebob Squarepants`,
+  age: 30,
+  isStudent: true,
+  hobbies: [`karate`, `jellyfishing`, `cooking`],
+  address: {
+    street: `124 Conch St.`,
+    city: `Bikini Bottom`,
+    country: `Int. Waters`,
+  },
+};
+
+for (const property in person.address) {
+  console.log(`Nested-Objects: ${person15.address[property]}`);
+}
+
+console.log(`Nested-Objects: ${person15.fullName}`);
+console.log(`Nested-Objects: ${person15.age}`);
+console.log(`Nested-Objects: ${person15.isStudent}`);
+console.log(`Nested-Objects: ${person15.hobbies[0]}`);
+console.log(`Nested-Objects: ${person15.hobbies[1]}`);
+console.log(`Nested-Objects: ${person15.hobbies[2]}`);
+console.log(`Nested-Objects: ${person15.address.street}`);
+console.log(`Nested-Objects: ${person15.address.city}`);
+console.log(`Nested-Objects: ${person15.address.country}`);
+
+// Example 2
+
+class Person2 {
+  constructor(name, age, ...address) {
+    this.name = name;
+    this.age = age;
+    this.address = new Address2(...address);
+  }
+}
+
+class Address2 {
+  constructor(street, city, country) {
+    this.street = street;
+    this.city = city;
+    this.country = country;
+  }
+}
+
+const person16 = new Person2(
+  `Spongebob`,
+  30,
+  `124 Conch St.`,
+  `Bikini Bottom`,
+  `Int. Waters`
+);
+
+const person17 = new Person2(
+  `Patrick`,
+  37,
+  `128 Conch St.`,
+  `Bikini Bottom`,
+  `Int. Waters`
+);
+
+const person18 = new Person2(
+  `Squidward`,
+  45,
+  `126 Conch St.`,
+  `Bikini Bottom`,
+  `Int. Waters`
+);
+
+console.log(`Nested-Objects: ${person16.name}`);
+console.log(`Nested-Objects: ${person16.age}`);
+console.log(`Nested-Objects: ${person16.address.street}`);
+console.log(`Nested-Objects: ${person16.address.city}`);
+console.log(`Nested-Objects: ${person16.address.country}`);
+
+console.log(`Nested-Objects: ${person17.name}`);
+console.log(`Nested-Objects: ${person17.age}`);
+console.log(`Nested-Objects: ${person17.address.street}`);
+console.log(`Nested-Objects: ${person17.address.city}`);
+console.log(`Nested-Objects: ${person17.address.country}`);
+
+console.log(`Nested-Objects: ${person18.name}`);
+console.log(`Nested-Objects: ${person18.age}`);
+console.log(`Nested-Objects: ${person18.address.street}`);
+console.log(`Nested-Objects: ${person18.address.city}`);
+console.log(`Nested-Objects: ${person18.address.country}`);
+
+//------------------------------------------------------------------
+
+// Arrays of Objects
