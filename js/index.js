@@ -1873,3 +1873,47 @@ console.log(cards);
 //------------------------------------------------------------------
 
 // Date Objects
+
+// Date(year, month, day, hour, minute, second, milisecond)
+// const date = new Date(2024, 0, 1, 2, 3, 4, 5);
+// const date = new Date(`2014-01-20T12:00:00Z`);
+
+const date = new Date();
+
+date.setFullYear(2025);
+date.setMonth(0);
+date.setDate(1);
+date.setHours(2);
+date.setMinutes(3);
+date.setSeconds(4);
+
+console.log(`Date Objects: ${date}`);
+
+// const year = date.getFullYear();
+// const month = date.getMonth();
+// const day1 = date.getDate();
+// const hour = date.getHours();
+// const minutes = date.getMinutes();
+// const seconds = date.getSeconds();
+// const miliseconds = date.getMilliseconds();
+// const dayOfWeek = date.getDay();
+
+// console.log(`Date Objects: ${year}`);
+// console.log(`Date Objects: ${month}`);
+// console.log(`Date Objects: ${day1}`);
+// console.log(`Date Objects: ${hour}`);
+// console.log(`Date Objects: ${minutes}`);
+// console.log(`Date Objects: ${seconds}`);
+// console.log(`Date Objects: ${miliseconds}`);
+// console.log(`Date Objects: ${dayOfWeek}`);
+
+const date1 = new Date(`2023-12-31`);
+const date2 = new Date(`2024-01-01`);
+
+if (date2 > date1) {
+  console.log(`Date Objects: Happy New Year!`);
+}
+
+//------------------------------------------------------------------
+
+// Closures
