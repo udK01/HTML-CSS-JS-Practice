@@ -2020,3 +2020,30 @@ function stopTimer() {
 //------------------------------------------------------------------
 
 // console.time()
+
+function loadData() {
+  console.time(`loadData`);
+
+  for (let i = 0; i < 1000000; i++) {
+    // do code.
+  }
+
+  console.timeEnd(`loadData`);
+}
+
+function processData() {
+  console.time(`processData`);
+
+  for (let i = 0; i < 4000000; i++) {
+    // do code.
+  }
+
+  console.timeEnd(`processData`);
+}
+
+loadData();
+processData();
+
+//------------------------------------------------------------------
+
+// Format Currency
