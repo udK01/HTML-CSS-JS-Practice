@@ -2021,29 +2021,49 @@ function stopTimer() {
 
 // console.time()
 
-function loadData() {
-  console.time(`loadData`);
+// function loadData() {
+//   console.time(`loadData`);
 
-  for (let i = 0; i < 1000000; i++) {
-    // do code.
-  }
+//   for (let i = 0; i < 1000000; i++) {
+//     // do code.
+//   }
 
-  console.timeEnd(`loadData`);
-}
+//   console.timeEnd(`loadData`);
+// }
 
-function processData() {
-  console.time(`processData`);
+// function processData() {
+//   console.time(`processData`);
 
-  for (let i = 0; i < 4000000; i++) {
-    // do code.
-  }
+//   for (let i = 0; i < 4000000; i++) {
+//     // do code.
+//   }
 
-  console.timeEnd(`processData`);
-}
+//   console.timeEnd(`processData`);
+// }
 
-loadData();
-processData();
+// loadData();
+// processData();
 
 //------------------------------------------------------------------
 
 // Format Currency
+
+let number = 123456.789;
+
+// number = number.toLocaleString(`en-US`);
+// number = number.toLocaleString(`hi-IN`);
+// number = number.toLocaleString(`de-DE`);
+// number = number.toLocaleString(undefined);
+
+// number = number.toLocaleString(`en-US`, { style: `currency`, currency: `USD` });
+// number = number.toLocaleString(`hi-IN`, {
+//   style: `currency`,
+//   currency: `INR`,
+// });
+number = number.toLocaleString(`de-DE`, { style: `currency`, currency: `EUR` });
+
+console.log(`Format Currency: ${number}`);
+
+//------------------------------------------------------------------
+
+// Compound Interest
