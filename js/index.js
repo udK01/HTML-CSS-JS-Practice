@@ -1984,3 +1984,39 @@ console.log(`The final score is ${game.getScore()}`);
 //------------------------------------------------------------------
 
 // setTimeOut()
+
+// Example 1.
+
+// function sayHello() {
+//   window.alert(`Hello!`);
+// }
+
+// setTimeout(sayHello, 3000);
+
+// Example 2.
+
+// setTimeout(function () {
+//   window.alert(`Hello!`), 3000;
+// });
+
+// const timeoutId = setTimeout(() => window.alert(`Hello`), 3000);
+
+// clearTimeout(timeoutId);
+
+// Example 3.
+
+let timeoutId;
+
+function startTimer() {
+  console.log(`Time Out: Started.`);
+  timeoutId = setTimeout(() => window.alert(`Hello!`), 3000);
+}
+
+function stopTimer() {
+  console.log(`Time Out: Stopped.`);
+  clearTimeout(timeoutId);
+}
+
+//------------------------------------------------------------------
+
+// console.time()
