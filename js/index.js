@@ -1917,3 +1917,70 @@ if (date2 > date1) {
 //------------------------------------------------------------------
 
 // Closures
+
+// Example 1.
+
+function outer() {
+  let message = `Hello`;
+  function inner() {
+    console.log(`Closures: ${message}`);
+  }
+  inner();
+}
+
+outer();
+
+// Example 2.
+
+function createCounter() {
+  let count = 0;
+  function increment() {
+    count++;
+    console.log(`Closures: Count1 Increased To ${count}`);
+  }
+
+  function getCount() {
+    return count;
+  }
+
+  return { increment, getCount };
+}
+
+const counter1 = createCounter();
+counter1.increment();
+counter1.increment();
+counter1.increment();
+
+console.log(`The current count is: ${counter1.getCount()}`);
+
+// Example 3.
+
+function createGame() {
+  let score = 0;
+
+  function increaseScore(points) {
+    score += points;
+    console.log(`Closures: +${points}pts.`);
+  }
+
+  function decreaseScore(points) {
+    score -= points;
+    console.log(`Closures: -${points}pts.`);
+  }
+
+  function getScore() {
+    return score;
+  }
+
+  return { increaseScore, decreaseScore, getScore };
+}
+
+const game = new createGame();
+game.increaseScore(5);
+game.increaseScore(6);
+game.decreaseScore(3);
+console.log(`The final score is ${game.getScore()}`);
+
+//------------------------------------------------------------------
+
+// setTimeOut()
