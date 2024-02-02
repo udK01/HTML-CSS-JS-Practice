@@ -2067,3 +2067,28 @@ console.log(`Format Currency: ${number}`);
 //------------------------------------------------------------------
 
 // Compound Interest
+
+function calculateCompoundInterest() {
+  const investmentAmount = document.getElementById(`investmentInput`);
+  const interestRate = document.getElementById(`interestRateInput`);
+  const years = document.getElementById(`yearsInput`);
+  const result = document.getElementById(`compoundInterestLabel`);
+
+  let invAmount = Number(investmentAmount.value);
+  let intRate = Number(interestRate.value / 100);
+  let y = Number(years.value);
+
+  invAmount = validate(invAmount, investmentAmount);
+  intRate = validate(intRate, interestRate);
+  y = validate(y, years);
+
+  for (let i = 0; i < y; i++) {
+    invAmount += invAmount * intRate;
+  }
+
+  result.textContent = `£${invAmount.toFixed(2).toLocaleString(undefined)}`;
+}
+
+function validate(x, inputBox) {
+  return x < 0 ? ((inputBox.value = `0`), 0) : x;
+}
