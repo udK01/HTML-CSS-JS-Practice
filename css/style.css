@@ -149,3 +149,21 @@ label {
     font-weight: bold;
     padding: 50px;
 }
+
+#stopwatchContainer {
+    background-color: white;
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.3);
+}
+
+#stopwatchDisplay {
+    font-size: 3em;
+    font-weight: bold;
+    color: hsl(0, 0%, 30%);
+    text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.75);
+    padding-bottom: 15px;
+}
