@@ -2092,3 +2092,20 @@ function calculateCompoundInterest() {
 function validate(x, inputBox) {
   return x < 0 ? ((inputBox.value = `0`), 0) : x;
 }
+
+//------------------------------------------------------------------
+
+// Digital Clock
+
+function updateDigitalClock() {
+  const date = new Date();
+  const hours = date.getHours().toString().padStart(2, 0);
+  const ampm = hours < 12 ? `AM` : `PM`;
+  const minutes = date.getMinutes().toString().padStart(2, 0);
+  const seconds = date.getSeconds().toString().padStart(2, 0);
+  const fullTime = `${hours}:${minutes}:${seconds} ${ampm}`;
+  document.getElementById(`digitalClock`).textContent = fullTime;
+}
+
+// updateDigitalClock();
+setInterval(updateDigitalClock, 1000);
