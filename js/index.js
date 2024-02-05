@@ -2165,32 +2165,77 @@ function update() {
 
 // ES6 Modules
 
-import { PI, getCircumference, getArea, getVolume } from "./mathUtil.js";
+// import { PI, getCircumference, getArea, getVolume } from "./mathUtil.js";
 
-console.log(PI);
-const circumference = getCircumference(10);
-const area = getArea(10);
-const volume = getVolume(10);
+// console.log(PI);
+// const circumference = getCircumference(10);
+// const area = getArea(10);
+// const volume = getVolume(10);
 
-console.log(`${circumference.toFixed(2)}cm`);
-console.log(`${area.toFixed(2)}cm^2`);
-console.log(`${volume.toFixed(2)}cm^3`);
+// console.log(`${circumference.toFixed(2)}cm`);
+// console.log(`${area.toFixed(2)}cm^2`);
+// console.log(`${volume.toFixed(2)}cm^3`);
 
 //------------------------------------------------------------------
 
 // Asynchronous Code
 
-function func1(callback) {
-  setTimeout(() => {
-    console.log(`Task 1`);
-    callback();
-  }, 3000);
-}
+// function func1(callback) {
+//   setTimeout(() => {
+//     console.log(`Task 1`);
+//     callback();
+//   }, 3000);
+// }
 
-function func2() {
-  console.log(`Task 2`);
-  console.log(`Task 3`);
-  console.log(`Task 4`);
-}
+// function func2() {
+//   console.log(`Task 2`);
+//   console.log(`Task 3`);
+//   console.log(`Task 4`);
+// }
 
-func1(func2);
+// func1(func2);
+
+//------------------------------------------------------------------
+
+// Error
+
+// Example 1.
+// try {
+//   console.log(`Hello.`);
+//   // NETWORK ERRORS
+//   // PROMISE REJECTION
+//   // SECURITY ERRORS
+// } catch (error) {
+//   console.error(error);
+// } finally {
+//   console.log(`This Always Executes.`);
+//   // CLOSE FILES
+//   // CLOSE CONNECTIONS
+//   // RELEASE RESOURCES
+// }
+// console.log(`You have reached the end!`);
+
+// Example 2.
+
+try {
+  const dividend = Number(window.prompt(`Enter a dividend: `));
+  const divisor = Number(window.prompt(`Enter a divisor: `));
+
+  if (divisor === 0) {
+    throw new Error(`You can't divide by zero!`);
+  }
+
+  if (isNaN(dividend) || isNaN(divisor)) {
+    throw new Error(`Values must be a number!`);
+  }
+
+  const result = dividend / divisor;
+  console.log(result);
+} catch (error) {
+  console.error(error);
+}
+console.log(`You have reached the end!`);
+
+//------------------------------------------------------------------
+
+// DOM JavaScript
