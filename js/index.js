@@ -2217,25 +2217,98 @@ function update() {
 
 // Example 2.
 
-try {
-  const dividend = Number(window.prompt(`Enter a dividend: `));
-  const divisor = Number(window.prompt(`Enter a divisor: `));
+// try {
+//   const dividend = Number(window.prompt(`Enter a dividend: `));
+//   const divisor = Number(window.prompt(`Enter a divisor: `));
 
-  if (divisor === 0) {
-    throw new Error(`You can't divide by zero!`);
-  }
+//   if (divisor === 0) {
+//     throw new Error(`You can't divide by zero!`);
+//   }
 
-  if (isNaN(dividend) || isNaN(divisor)) {
-    throw new Error(`Values must be a number!`);
-  }
+//   if (isNaN(dividend) || isNaN(divisor)) {
+//     throw new Error(`Values must be a number!`);
+//   }
 
-  const result = dividend / divisor;
-  console.log(result);
-} catch (error) {
-  console.error(error);
-}
-console.log(`You have reached the end!`);
+//   const result = dividend / divisor;
+//   console.log(result);
+// } catch (error) {
+//   console.error(error);
+// }
+// console.log(`You have reached the end!`);
 
 //------------------------------------------------------------------
 
-// DOM JavaScript
+// Element Selectors
+
+// Example 1. getElementById();
+
+// const myHeading = document.getElementById(`myHeading`);
+// myHeading.style.backgroundColor = `yellow`;
+// myHeading.style.textAlign = `center`;
+
+// Example 2. getElementsByClassName();
+
+// const fruits = document.getElementsByClassName(`fruits`);
+
+// fruits[0].style.backgroundColor = `green`;
+// fruits[1].style.backgroundColor = `orange`;
+// fruits[2].style.backgroundColor = `yellow`;
+
+// for (let fruit of fruits) {
+//   fruit.style.textAlign = `center`;
+// }
+
+// Array.from(fruits).forEach((fruit) => {
+//   fruit.style.backgroundColor = `yellow`;
+// });
+
+// Example 3. getElementsByClass();
+
+// const h4Elements = document.getElementsByTagName(`h4`);
+// const liElements = document.getElementsByTagName(`li`);
+
+// h4Elements[0].style.backgroundColor = `green`;
+// h4Elements[1].style.backgroundColor = `green`;
+
+// for (let h4Element of h4Elements) {
+//   h4Element.style.backgroundColor = `green`;
+// }
+
+// liElements[0].style.backgroundColor = `red`;
+// liElements[1].style.backgroundColor = `red`;
+// liElements[2].style.backgroundColor = `red`;
+
+// for (let liElement of liElements) {
+//   liElement.style.backgroundColor = `lightgreen`;
+// }
+
+// Array.from(h4Elements).forEach((h4Element) => {
+//   h4Element.style.backgroundColor = `green`;
+// });
+
+// Array.from(liElements).forEach((liElement) => {
+//   liElement.style.backgroundColor = `lightgreen`;
+// });
+
+// Example 4. // querySelector();
+
+// const element = document.querySelector(`.fruits`);
+
+// element.style.backgroundColor = `yellow`;
+
+// Example 5. // querySelectorAll();
+
+// const foods = document.querySelectorAll(`li`);
+
+// foods[0].style.backgroundColor = `yellow`;
+// foods[1].style.backgroundColor = `yellow`;
+// foods[2].style.backgroundColor = `yellow`;
+// foods[3].style.backgroundColor = `yellow`;
+
+// foods.forEach((food) => {
+//   food.style.backgroundColor = `yellow`;
+// });
+
+//------------------------------------------------------------------
+
+// DOM Nagivation
