@@ -2312,3 +2312,61 @@ function update() {
 //------------------------------------------------------------------
 
 // DOM Nagivation
+
+// Example 1. .firstElementChild
+
+// const element = document.getElementById(`fruits`);
+// const firstChild = element.firstElementChild;
+// firstChild.style.backgroundColor = `yellow`;
+
+// const ulElements = document.querySelectorAll(`ul`);
+
+// ulElements.forEach((ulElement) => {
+//   ulElement.firstElementChild.style.backgroundColor = `yellow`;
+// });
+
+// Example 2. .lastElementChild
+
+// const element = document.getElementById(`vegetables`);
+// const lastChild = element.lastElementChild;
+// lastChild.style.backgroundColor = `yellow`;
+
+// const ulElements = document.querySelectorAll(`ul`);
+
+// ulElements.forEach((ulElement) => {
+//   ulElement.lastElementChild.style.backgroundColor = `yellow`;
+// });
+
+// Example 3. nextElementSibling
+
+// const element = document.getElementById(`fruits`);
+// const nextSibling = element.nextElementSibling;
+// nextSibling.style.backgroundColor = `yellow`;
+
+// Example 4. previousElementSibling
+
+// const element = document.getElementById(`banana`);
+// const nextSibling = element.previousElementSibling;
+// nextSibling.style.backgroundColor = `yellow`;
+
+// Example 5. parentElement
+
+// const element = document.getElementById(`apple`);
+// const parent = element.parentElement;
+// parent.style.backgroundColor = `yellow`;
+
+// Example 6. children
+
+// const element = document.getElementById(`fruits`);
+// const children = element.children;
+// Array.from(children).forEach((child) => {
+//   child.style.backgroundColor = `yellow`;
+// });
+
+// const element = document.getElementById(`fruits`);
+// const children = element.children;
+// children[0].style.backgroundColor = `yellow`;
+
+//------------------------------------------------------------------
+
+// ADD / CHANGE HTML in Js.
