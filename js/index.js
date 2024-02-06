@@ -2370,3 +2370,51 @@ function update() {
 //------------------------------------------------------------------
 
 // ADD / CHANGE HTML in Js.
+
+// Step 1. Create Element
+
+const newH1 = document.createElement(`h1`);
+
+// Step 2. Add Attributes/Properties
+newH1.textContent = `I like pizza.`;
+newH1.id = `createdH1`;
+newH1.style.color = `tomato`;
+newH1.style.textAlign = `center`;
+
+// Step 3 Append Element To DOM
+// document.body.append(newH1);
+// document.body.prepend(newH1);
+document.getElementById(`box1`).append(newH1);
+// document.getElementById(`box1`).prepend(newH1);
+
+// const box2 = document.getElementById(`box2`);
+// document.body.insertBefore(newH1, box2);
+
+// const boxes = document.querySelectorAll(`.box`);
+// document.body.insertBefore(newH1, boxes[2]);
+
+// Remove HTML Element
+// document.body.removeChild(newH1);
+// document.getElementById(`box1`).removeChild(newH1);
+
+// // Example 2.
+// const newListItem = document.createElement(`li`);
+
+// newListItem.textContent = `Coconut`;
+// newListItem.id = `coconut`;
+// newListItem.style.fontWeight = `bold`;
+// newListItem.style.backgroundColor = `lightgreen`;
+
+// document.getElementById(`fruits`).append(newListItem);
+// document.getElementById(`fruits`).prepend(newListItem);
+// document.getElementById(`apple`).append(newListItem);
+// const banana = document.getElementById(`banana`);
+// document.getElementById(`fruits`).insertBefore(newListItem, banana);
+// const listItems = document.querySelectorAll(`#fruits li`);
+// document.getElementById(`fruits`).insertBefore(newListItem, listItems[1]);
+
+// document.getElementById(`fruits`).removeChild(newListItem);
+
+//------------------------------------------------------------------
+
+// Mouse Events
