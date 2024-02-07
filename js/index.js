@@ -2506,44 +2506,134 @@ setInterval(updateDigitalClock, 1000);
 
 // NodeLists
 
-let buttons = document.querySelectorAll(".myButtons");
+// let buttons = document.querySelectorAll(".myButtons");
 
-const newButton = document.createElement(`button`);
-newButton.textContent = "Button 5";
-newButton.classList = "myButtons";
-document.body.appendChild(newButton);
+// const newButton = document.createElement(`button`);
+// newButton.textContent = "Button 5";
+// newButton.classList = "myButtons";
+// document.body.appendChild(newButton);
 
-buttons = document.querySelectorAll(`.myButtons`);
+// buttons = document.querySelectorAll(`.myButtons`);
+
+// // buttons.forEach((button) => {
+// //   button.style.backgroundColor = "green";
+// // });
+
+// // buttons.forEach((button) => {
+// //   button.addEventListener("click", (event) => {
+// //     event.target.style.backgroundColor = "tomato";
+// //   });
+// // });
 
 // buttons.forEach((button) => {
-//   button.style.backgroundColor = "green";
+//   button.addEventListener("mouseover", (event) => {
+//     event.target.style.backgroundColor = `tomato`;
+//   });
+// });
+
+// buttons.forEach((button) => {
+//   button.addEventListener("mouseout", (event) => {
+//     event.target.style.backgroundColor = `hsl(205,100%,60%)`;
+//   });
 // });
 
 // buttons.forEach((button) => {
 //   button.addEventListener("click", (event) => {
-//     event.target.style.backgroundColor = "tomato";
+//     event.target.remove(); // Remove from DOM.
+//     buttons = document.querySelectorAll(`.myButtons`); // Remove from NodeList.
 //   });
 // });
 
+//------------------------------------------------------------------
+
+// classList
+
+// const myH1 = document.getElementById(`myH1`);
+// const myButton = document.getElementById(`myButton`);
+
+// myH1.classList.add(`enabled`);
+// myButton.classList.add(`enabled`);
+
+// Example 1. Add
+
+// myButton.addEventListener("mouseover", (event) => {
+//   event.target.classList.add(`hover`);
+// });
+
+// Example 2. Remove
+
+// myButton.addEventListener("mouseout", (event) => {
+//   event.target.classList.remove(`hover`);
+// });
+
+// Example 3. Toggle
+
+// myButton.addEventListener("mouseover", (event) => {
+//   event.target.classList.toggle(`hover`);
+// });
+
+// myButton.addEventListener("mouseout", (event) => {
+//   event.target.classList.toggle(`hover`);
+// });
+
+// myButton.classList.add(`enabled`);
+
+// Example 4. Replace
+
+// myButton.addEventListener("click", event => {
+//   event.target.classList.replace(`enabled`, `disabled`);
+// });
+
+// Example 5. Contains
+
+// myButton.addEventListener("click", (event) => {
+//   if (event.target.classList.contains(`disabled`)) {
+//     event.target.textContent += `😡`;
+//   } else {
+//     event.target.classList.replace(`enabled`, `disabled`);
+//   }
+// });
+
+// myH1.addEventListener("click", (event) => {
+//   if (event.target.classList.contains(`disabled`)) {
+//     event.target.textContent += `😡`;
+//   } else {
+//     event.target.classList.replace(`enabled`, `disabled`);
+//   }
+// });
+
+// Challenge
+
+let buttons = document.querySelectorAll(`.myButtons`);
+
+buttons.forEach((button) => {
+  button.classList.add(`enabled`);
+});
+
 buttons.forEach((button) => {
   button.addEventListener("mouseover", (event) => {
-    event.target.style.backgroundColor = `tomato`;
+    event.target.classList.toggle(`hover`);
   });
 });
 
 buttons.forEach((button) => {
   button.addEventListener("mouseout", (event) => {
-    event.target.style.backgroundColor = `hsl(205,100%,60%)`;
+    event.target.classList.toggle(`hover`);
   });
 });
 
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
-    event.target.remove(); // Remove from DOM.
-    buttons = document.querySelectorAll(`.myButtons`); // Remove from NodeList.
+    event.target.classList.replace(`enabled`, `disabled`);
+
+    if (event.target.classList.contains(`disabled`)) {
+      event.target.textContent += `😡`;
+    } else {
+      event.target.add(`disabled`);
+    }
   });
 });
 
 //------------------------------------------------------------------
 
-// classList
+// ROCK PAPER SCISSORS Project

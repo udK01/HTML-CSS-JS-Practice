@@ -9,9 +9,9 @@ body {
     font-size: 50px;
 } */
 
-img {
+/* img {
     margin-left: 250px;
-}
+} */
 
 /* button {
     background-color: unset;
@@ -25,7 +25,7 @@ button:hover {
     color: white;
 } */
 
-#container {
+/* #container {
     text-align: center;
     padding: 10px;
 }
@@ -138,7 +138,7 @@ label {
     color: green;
     font-size: 1.5em;
     font-weight: bold;
-}
+} */
 
 #digitalClock {
     display: flex;
@@ -150,7 +150,7 @@ label {
     padding: 50px;
 }
 
-#stopwatchContainer {
+/* #stopwatchContainer {
     background-color: white;
     text-align: center;
     max-width: 350px;
@@ -184,9 +184,9 @@ label {
     font-size: 4.5rem;
     font-weight: bold;
     position: relative;
-}
+} */
 
-.myButtons {
+/* .myButtons {
     font-size: 4rem;
     margin: 10px;
     border: none;
@@ -194,4 +194,27 @@ label {
     padding: 10px;
     background-color: hsl(205,100%,60%);
     color: white;
+} */
+
+.myButtons {
+    font-size: 4rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.enabled {
+    background-color: hsl(204, 100%, 50%);
+    color: white;
+}
+
+.hover {
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+    font-weight: bold;
+}
+
+.disabled {
+    background-color: hsl(0, 0%, 60%);
+    color: hsl(0, 0%, 80%);
 }
