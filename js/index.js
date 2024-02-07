@@ -2418,3 +2418,30 @@ document.getElementById(`box1`).append(newH1);
 //------------------------------------------------------------------
 
 // Mouse Events
+
+const myBox = document.getElementById(`myBox`);
+const myButton1 = document.getElementById(`myButton1`);
+
+myButton1.addEventListener("click", (event) => {
+  myBox.style.backgroundColor = `tomato`;
+  myBox.textContent = `OUCH! 😡`;
+});
+
+myButton1.addEventListener("mouseover", (event) => {
+  myBox.style.backgroundColor = `yellow`;
+  myBox.textContent = `Don't do it 🤔`;
+});
+
+myButton1.addEventListener("mouseout", (event) => {
+  myBox.style.backgroundColor = `lightgreen`;
+  myBox.textContent = `Click Me 😊`;
+});
+
+// function changeColor(event) {
+//   event.target.style.backgroundColor = `tomato`;
+//   event.target.textContent = `OUCH! 😡`;
+// }
+
+//------------------------------------------------------------------
+
+// Key Events
