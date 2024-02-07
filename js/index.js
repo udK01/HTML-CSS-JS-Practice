@@ -2446,31 +2446,62 @@ document.getElementById(`box1`).append(newH1);
 
 // Key Events
 
-const myBox = document.getElementById(`myBox`);
-const moveSpeed = 10;
-let x = 0;
-let y = 0;
+// const myBox = document.getElementById(`myBox`);
+// const moveSpeed = 10;
+// let x = 0;
+// let y = 0;
 
-document.addEventListener("keydown", (event) => {
-  // console.log(`Key down = ${event.key}`);
-  switch (event.key) {
-    case `w`:
-      y -= moveSpeed;
-      break;
-    case `s`:
-      y += moveSpeed;
-      break;
-    case `a`:
-      x -= moveSpeed;
-      break;
-    case `d`:
-      x += moveSpeed;
-      break;
+// document.addEventListener("keydown", (event) => {
+//   // console.log(`Key down = ${event.key}`);
+//   switch (event.key) {
+//     case `w`:
+//       y -= moveSpeed;
+//       break;
+//     case `s`:
+//       y += moveSpeed;
+//       break;
+//     case `a`:
+//       x -= moveSpeed;
+//       break;
+//     case `d`:
+//       x += moveSpeed;
+//       break;
+//   }
+//   myBox.style.top = `${y}px`;
+//   myBox.style.left = `${x}px`;
+// });
+
+// document.addEventListener("keyup", (event) => {
+//   // console.log(`Key up = ${event.key}`);
+// });
+
+//------------------------------------------------------------------
+
+// Show And Hide HTML
+
+const myButton2 = document.getElementById(`myButton2`);
+const foxImage = document.getElementById(`myImg`);
+
+myButton2.addEventListener("click", (event) => {
+  if (foxImage.style.display === "none") {
+    foxImage.style.display = "block";
+    myButton2.textContent = "Hide";
+  } else {
+    foxImage.style.display = "none";
+    myButton2.textContent = "Show";
   }
-  myBox.style.top = `${y}px`;
-  myBox.style.left = `${x}px`;
 });
 
-document.addEventListener("keyup", (event) => {
-  // console.log(`Key up = ${event.key}`);
-});
+// myButton2.addEventListener("click", (event) => {
+//   if (foxImage.style.visibility === "hidden") {
+//     foxImage.style.visibility = "visible";
+//     myButton2.textContent = "Hide";
+//   } else {
+//     foxImage.style.visibility = "hidden";
+//     myButton2.textContent = "Show";
+//   }
+// });
+
+//------------------------------------------------------------------
+
+// NodeLists
