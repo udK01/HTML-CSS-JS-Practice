@@ -2068,30 +2068,30 @@
 
 // Compound Interest
 
-function calculateCompoundInterest() {
-  const investmentAmount = document.getElementById(`investmentInput`);
-  const interestRate = document.getElementById(`interestRateInput`);
-  const years = document.getElementById(`yearsInput`);
-  const result = document.getElementById(`compoundInterestLabel`);
+// function calculateCompoundInterest() {
+//   const investmentAmount = document.getElementById(`investmentInput`);
+//   const interestRate = document.getElementById(`interestRateInput`);
+//   const years = document.getElementById(`yearsInput`);
+//   const result = document.getElementById(`compoundInterestLabel`);
 
-  let invAmount = Number(investmentAmount.value);
-  let intRate = Number(interestRate.value / 100);
-  let y = Number(years.value);
+//   let invAmount = Number(investmentAmount.value);
+//   let intRate = Number(interestRate.value / 100);
+//   let y = Number(years.value);
 
-  invAmount = validate(invAmount, investmentAmount);
-  intRate = validate(intRate, interestRate);
-  y = validate(y, years);
+//   invAmount = validate(invAmount, investmentAmount);
+//   intRate = validate(intRate, interestRate);
+//   y = validate(y, years);
 
-  for (let i = 0; i < y; i++) {
-    invAmount += invAmount * intRate;
-  }
+//   for (let i = 0; i < y; i++) {
+//     invAmount += invAmount * intRate;
+//   }
 
-  result.textContent = `£${invAmount.toFixed(2).toLocaleString(undefined)}`;
-}
+//   result.textContent = `£${invAmount.toFixed(2).toLocaleString(undefined)}`;
+// }
 
-function validate(x, inputBox) {
-  return x < 0 ? ((inputBox.value = `0`), 0) : x;
-}
+// function validate(x, inputBox) {
+//   return x < 0 ? ((inputBox.value = `0`), 0) : x;
+// }
 
 //------------------------------------------------------------------
 
@@ -2114,52 +2114,52 @@ setInterval(updateDigitalClock, 1000);
 
 // Stopwatch
 
-const stopwatchDisplay = document.getElementById(`stopwatchDisplay`);
-let timer = null;
-let startTime = 0;
-let elapsedTime = 0;
-let isRunning = false;
+// const stopwatchDisplay = document.getElementById(`stopwatchDisplay`);
+// let timer = null;
+// let startTime = 0;
+// let elapsedTime = 0;
+// let isRunning = false;
 
-function start() {
-  if (!isRunning) {
-    startTime = Date.now() - elapsedTime;
-    timer = setInterval(update, 10);
-    isRunning = true;
-  }
-}
+// function start() {
+//   if (!isRunning) {
+//     startTime = Date.now() - elapsedTime;
+//     timer = setInterval(update, 10);
+//     isRunning = true;
+//   }
+// }
 
-function stop() {
-  if (isRunning) {
-    clearInterval(timer);
-    elapsedTime = Date.now() - startTime;
-    isRunning = false;
-  }
-}
+// function stop() {
+//   if (isRunning) {
+//     clearInterval(timer);
+//     elapsedTime = Date.now() - startTime;
+//     isRunning = false;
+//   }
+// }
 
-function reset() {
-  clearInterval(timer);
-  startTime = 0;
-  elapsedTime = 0;
-  isRunning = false;
-  stopwatchDisplay.textContent = `00:00:00:00`;
-}
+// function reset() {
+//   clearInterval(timer);
+//   startTime = 0;
+//   elapsedTime = 0;
+//   isRunning = false;
+//   stopwatchDisplay.textContent = `00:00:00:00`;
+// }
 
-function update() {
-  const currentTime = Date.now();
-  elapsedTime = currentTime - startTime;
+// function update() {
+//   const currentTime = Date.now();
+//   elapsedTime = currentTime - startTime;
 
-  let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
-  let minutes = Math.floor((elapsedTime / (1000 * 60)) % 60);
-  let seconds = Math.floor((elapsedTime / 1000) % 60);
-  let miliseconds = Math.floor((elapsedTime % 1000) / 10);
+//   let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+//   let minutes = Math.floor((elapsedTime / (1000 * 60)) % 60);
+//   let seconds = Math.floor((elapsedTime / 1000) % 60);
+//   let miliseconds = Math.floor((elapsedTime % 1000) / 10);
 
-  hours = String(hours).padStart(2, `0`);
-  minutes = String(minutes).padStart(2, `0`);
-  seconds = String(seconds).padStart(2, `0`);
-  miliseconds = String(miliseconds).padStart(2, `0`);
+//   hours = String(hours).padStart(2, `0`);
+//   minutes = String(minutes).padStart(2, `0`);
+//   seconds = String(seconds).padStart(2, `0`);
+//   miliseconds = String(miliseconds).padStart(2, `0`);
 
-  stopwatchDisplay.textContent = `${hours}:${minutes}:${seconds}:${miliseconds}`;
-}
+//   stopwatchDisplay.textContent = `${hours}:${minutes}:${seconds}:${miliseconds}`;
+// }
 
 //------------------------------------------------------------------
 
@@ -2373,18 +2373,18 @@ function update() {
 
 // Step 1. Create Element
 
-const newH1 = document.createElement(`h1`);
+// const newH1 = document.createElement(`h1`);
 
 // Step 2. Add Attributes/Properties
-newH1.textContent = `I like pizza.`;
-newH1.id = `createdH1`;
-newH1.style.color = `tomato`;
-newH1.style.textAlign = `center`;
+// newH1.textContent = `I like pizza.`;
+// newH1.id = `createdH1`;
+// newH1.style.color = `tomato`;
+// newH1.style.textAlign = `center`;
 
 // Step 3 Append Element To DOM
 // document.body.append(newH1);
 // document.body.prepend(newH1);
-document.getElementById(`box1`).append(newH1);
+// document.getElementById(`box1`).append(newH1);
 // document.getElementById(`box1`).prepend(newH1);
 
 // const box2 = document.getElementById(`box2`);
@@ -2479,18 +2479,18 @@ document.getElementById(`box1`).append(newH1);
 
 // Show And Hide HTML
 
-const myButton2 = document.getElementById(`myButton2`);
-const foxImage = document.getElementById(`myImg`);
+// const myButton2 = document.getElementById(`myButton2`);
+// const foxImage = document.getElementById(`myImg`);
 
-myButton2.addEventListener("click", (event) => {
-  if (foxImage.style.display === "none") {
-    foxImage.style.display = "block";
-    myButton2.textContent = "Hide";
-  } else {
-    foxImage.style.display = "none";
-    myButton2.textContent = "Show";
-  }
-});
+// myButton2.addEventListener("click", (event) => {
+//   if (foxImage.style.display === "none") {
+//     foxImage.style.display = "block";
+//     myButton2.textContent = "Hide";
+//   } else {
+//     foxImage.style.display = "none";
+//     myButton2.textContent = "Show";
+//   }
+// });
 
 // myButton2.addEventListener("click", (event) => {
 //   if (foxImage.style.visibility === "hidden") {
@@ -2505,3 +2505,45 @@ myButton2.addEventListener("click", (event) => {
 //------------------------------------------------------------------
 
 // NodeLists
+
+let buttons = document.querySelectorAll(".myButtons");
+
+const newButton = document.createElement(`button`);
+newButton.textContent = "Button 5";
+newButton.classList = "myButtons";
+document.body.appendChild(newButton);
+
+buttons = document.querySelectorAll(`.myButtons`);
+
+// buttons.forEach((button) => {
+//   button.style.backgroundColor = "green";
+// });
+
+// buttons.forEach((button) => {
+//   button.addEventListener("click", (event) => {
+//     event.target.style.backgroundColor = "tomato";
+//   });
+// });
+
+buttons.forEach((button) => {
+  button.addEventListener("mouseover", (event) => {
+    event.target.style.backgroundColor = `tomato`;
+  });
+});
+
+buttons.forEach((button) => {
+  button.addEventListener("mouseout", (event) => {
+    event.target.style.backgroundColor = `hsl(205,100%,60%)`;
+  });
+});
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.target.remove(); // Remove from DOM.
+    buttons = document.querySelectorAll(`.myButtons`); // Remove from NodeList.
+  });
+});
+
+//------------------------------------------------------------------
+
+// classList
