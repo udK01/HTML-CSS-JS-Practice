@@ -183,4 +183,5 @@ label {
     height: 300px;
     font-size: 4.5rem;
     font-weight: bold;
+    position: relative;
 }

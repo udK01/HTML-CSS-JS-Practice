@@ -2419,23 +2419,23 @@ document.getElementById(`box1`).append(newH1);
 
 // Mouse Events
 
-const myBox = document.getElementById(`myBox`);
-const myButton1 = document.getElementById(`myButton1`);
+// const myBox = document.getElementById(`myBox`);
+// const myButton1 = document.getElementById(`myButton1`);
 
-myButton1.addEventListener("click", (event) => {
-  myBox.style.backgroundColor = `tomato`;
-  myBox.textContent = `OUCH! 😡`;
-});
+// myButton1.addEventListener("click", (event) => {
+//   myBox.style.backgroundColor = `tomato`;
+//   myBox.textContent = `OUCH! 😡`;
+// });
 
-myButton1.addEventListener("mouseover", (event) => {
-  myBox.style.backgroundColor = `yellow`;
-  myBox.textContent = `Don't do it 🤔`;
-});
+// myButton1.addEventListener("mouseover", (event) => {
+//   myBox.style.backgroundColor = `yellow`;
+//   myBox.textContent = `Don't do it 🤔`;
+// });
 
-myButton1.addEventListener("mouseout", (event) => {
-  myBox.style.backgroundColor = `lightgreen`;
-  myBox.textContent = `Click Me 😊`;
-});
+// myButton1.addEventListener("mouseout", (event) => {
+//   myBox.style.backgroundColor = `lightgreen`;
+//   myBox.textContent = `Click Me 😊`;
+// });
 
 // function changeColor(event) {
 //   event.target.style.backgroundColor = `tomato`;
@@ -2445,3 +2445,32 @@ myButton1.addEventListener("mouseout", (event) => {
 //------------------------------------------------------------------
 
 // Key Events
+
+const myBox = document.getElementById(`myBox`);
+const moveSpeed = 10;
+let x = 0;
+let y = 0;
+
+document.addEventListener("keydown", (event) => {
+  // console.log(`Key down = ${event.key}`);
+  switch (event.key) {
+    case `w`:
+      y -= moveSpeed;
+      break;
+    case `s`:
+      y += moveSpeed;
+      break;
+    case `a`:
+      x -= moveSpeed;
+      break;
+    case `d`:
+      x += moveSpeed;
+      break;
+  }
+  myBox.style.top = `${y}px`;
+  myBox.style.left = `${x}px`;
+});
+
+document.addEventListener("keyup", (event) => {
+  // console.log(`Key up = ${event.key}`);
+});
