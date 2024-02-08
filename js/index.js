@@ -2731,44 +2731,112 @@ setInterval(updateDigitalClock, 1000);
 
 // Callback Hell
 
-function task1(callback) {
-  setTimeout(() => {
-    console.log(`Task 1 complete.`);
-    callback();
-  }, 2000);
-}
+// function task1(callback) {
+//   setTimeout(() => {
+//     console.log(`Task 1 complete.`);
+//     callback();
+//   }, 2000);
+// }
 
-function task2(callback) {
-  setTimeout(() => {
-    console.log(`Task 2 complete.`);
-    callback();
-  }, 1000);
-}
+// function task2(callback) {
+//   setTimeout(() => {
+//     console.log(`Task 2 complete.`);
+//     callback();
+//   }, 1000);
+// }
 
-function task3(callback) {
-  setTimeout(() => {
-    console.log(`Task 3 complete.`);
-    callback();
-  }, 3000);
-}
+// function task3(callback) {
+//   setTimeout(() => {
+//     console.log(`Task 3 complete.`);
+//     callback();
+//   }, 3000);
+// }
 
-function task4(callback) {
-  setTimeout(() => {
-    console.log(`Task 4 complete.`);
-    callback();
-  }, 1500);
-}
+// function task4(callback) {
+//   setTimeout(() => {
+//     console.log(`Task 4 complete.`);
+//     callback();
+//   }, 1500);
+// }
 
-task1(() => {
-  task2(() => {
-    task3(() => {
-      task4(() => {
-        console.log(`All tasks completed.`);
-      });
-    });
-  });
-});
+// task1(() => {
+//   task2(() => {
+//     task3(() => {
+//       task4(() => {
+//         console.log(`All tasks completed.`);
+//       });
+//     });
+//   });
+// });
 
 //------------------------------------------------------------------
 
 // Promise
+
+function walkDog() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const dogWalked = true;
+
+      if (dogWalked) {
+        resolve(`You walk the dog. 🐕`);
+      } else {
+        reject(`You didn't walk the dog. 🐕`);
+      }
+    }, 1500);
+  });
+}
+
+function cleanKitchen() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const kitchenCleaned = true;
+
+      if (kitchenCleaned) {
+        resolve(`You clean the ktichen. 🧹`);
+      } else {
+        reject(`You didn't clean the ktichen. 🧹`);
+      }
+    }, 2500);
+  });
+}
+
+function takeOutTrash() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const trashTakeOut = false;
+
+      if (trashTakeOut) {
+        resolve(`You take out the trash. ♻`);
+      } else {
+        reject(`You didn't take out the trash. ♻`);
+      }
+    }, 500);
+  });
+}
+
+walkDog()
+  .then((value) => {
+    console.log(value);
+    return cleanKitchen();
+  })
+  .then((value) => {
+    console.log(value);
+    return takeOutTrash();
+  })
+  .then((value) => {
+    console.log(value);
+    console.log(`You've finished all the chores!`);
+  })
+  .catch((error) => console.error(error));
+
+// Callback Hell!
+// walkDog(() => {
+//   cleanKitchen(() => {
+//     takeOutTrash(() => console.log(`You finished all the chores!`));
+//   });
+// });
+
+//------------------------------------------------------------------
+
+// Async / Await
