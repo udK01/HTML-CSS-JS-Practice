@@ -2690,39 +2690,85 @@ setInterval(updateDigitalClock, 1000);
 
 // Image Slider
 
-const slides = document.querySelectorAll(`.slides img`);
-let slideIndex = 0;
-let intervalId = null;
+// const slides = document.querySelectorAll(`.slides img`);
+// let slideIndex = 0;
+// let intervalId = null;
 
-document.addEventListener(`DOMContentLoaded`, initialiseSlider);
+// document.addEventListener(`DOMContentLoaded`, initialiseSlider);
 
-function initialiseSlider() {
-  if (slides.length > 0) {
-    slides[slideIndex].classList.add(`displaySlide`);
-    intervalId = setInterval(nextSlide, 5000);
-  }
+// function initialiseSlider() {
+//   if (slides.length > 0) {
+//     slides[slideIndex].classList.add(`displaySlide`);
+//     intervalId = setInterval(nextSlide, 5000);
+//   }
+// }
+
+// function showSlide(index) {
+//   if (index >= slides.length) {
+//     slideIndex = 0;
+//   } else if (index < 0) {
+//     slideIndex = slides.length - 1;
+//   }
+
+//   slides.forEach((slide) => {
+//     slide.classList.remove(`displaySlide`);
+//   });
+//   slides[slideIndex].classList.add(`displaySlide`);
+// }
+
+// function prevSlide() {
+//   clearInterval(intervalId);
+//   slideIndex--;
+//   showSlide(slideIndex);
+// }
+
+// function nextSlide() {
+//   slideIndex++;
+//   showSlide(slideIndex);
+// }
+
+//------------------------------------------------------------------
+
+// Callback Hell
+
+function task1(callback) {
+  setTimeout(() => {
+    console.log(`Task 1 complete.`);
+    callback();
+  }, 2000);
 }
 
-function showSlide(index) {
-  if (index >= slides.length) {
-    slideIndex = 0;
-  } else if (index < 0) {
-    slideIndex = slides.length - 1;
-  }
+function task2(callback) {
+  setTimeout(() => {
+    console.log(`Task 2 complete.`);
+    callback();
+  }, 1000);
+}
 
-  slides.forEach((slide) => {
-    slide.classList.remove(`displaySlide`);
+function task3(callback) {
+  setTimeout(() => {
+    console.log(`Task 3 complete.`);
+    callback();
+  }, 3000);
+}
+
+function task4(callback) {
+  setTimeout(() => {
+    console.log(`Task 4 complete.`);
+    callback();
+  }, 1500);
+}
+
+task1(() => {
+  task2(() => {
+    task3(() => {
+      task4(() => {
+        console.log(`All tasks completed.`);
+      });
+    });
   });
-  slides[slideIndex].classList.add(`displaySlide`);
-}
+});
 
-function prevSlide() {
-  clearInterval(intervalId);
-  slideIndex--;
-  showSlide(slideIndex);
-}
+//------------------------------------------------------------------
 
-function nextSlide() {
-  slideIndex++;
-  showSlide(slideIndex);
-}
+// Promise
