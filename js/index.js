@@ -2638,50 +2638,91 @@ setInterval(updateDigitalClock, 1000);
 
 // ROCK PAPER SCISSORS Project
 
-const choices = [`rock`, `paper`, `scissors`];
-const playerDisplay = document.getElementById(`playerDisplay`);
-const computerDisplay = document.getElementById(`computerDisplay`);
-const resultDisplay = document.getElementById(`resultDisplay`);
-const playerScoreDisplay = document.getElementById(`playerScore`);
-const computerScoreDisplay = document.getElementById(`computerScore`);
-let playerScore = 0;
-let computerScore = 0;
+// const choices = [`rock`, `paper`, `scissors`];
+// const playerDisplay = document.getElementById(`playerDisplay`);
+// const computerDisplay = document.getElementById(`computerDisplay`);
+// const resultDisplay = document.getElementById(`resultDisplay`);
+// const playerScoreDisplay = document.getElementById(`playerScore`);
+// const computerScoreDisplay = document.getElementById(`computerScore`);
+// let playerScore = 0;
+// let computerScore = 0;
 
-function playGame(choice) {
-  // Computer Pick.
-  const opponentChoice = choices[Math.floor(Math.random() * 3)];
+// function playGame(choice) {
+//   // Computer Pick.
+//   const opponentChoice = choices[Math.floor(Math.random() * 3)];
 
-  // Handle Draws.
-  if (choice === opponentChoice) {
-    resultDisplay.textContent = `It's a draw.`;
-  } else if (opponentChoice !== choiceCounter(choice)) {
-    // Decide Winner
-    resultDisplay.textContent = `You won! :D`;
-    playerScore++;
-  } else {
-    resultDisplay.textContent = `You lost! :c`;
-    computerScore++;
+//   // Handle Draws.
+//   if (choice === opponentChoice) {
+//     resultDisplay.textContent = `It's a draw.`;
+//   } else if (opponentChoice !== choiceCounter(choice)) {
+//     // Decide Winner
+//     resultDisplay.textContent = `You won! :D`;
+//     playerScore++;
+//   } else {
+//     resultDisplay.textContent = `You lost! :c`;
+//     computerScore++;
+//   }
+
+//   updateDisplay(choice, opponentChoice);
+// }
+
+// // Provides the counter choice.
+// function choiceCounter(choice) {
+//   switch (choice) {
+//     case `rock`:
+//       return `paper`;
+//     case `paper`:
+//       return `scissors`;
+//     case `scissors`:
+//       return `rock`;
+//   }
+// }
+
+// // Updates the picks and score.
+// function updateDisplay(choice, opponentChoice) {
+//   playerDisplay.textContent = `Player: ${choice}`;
+//   computerDisplay.textContent = `Computer: ${opponentChoice}`;
+//   playerScoreDisplay.textContent = `Player:${playerScore}`;
+//   computerScoreDisplay.textContent = `Computer: ${computerScore}`;
+// }
+
+//------------------------------------------------------------------
+
+// Image Slider
+
+const slides = document.querySelectorAll(`.slides img`);
+let slideIndex = 0;
+let intervalId = null;
+
+document.addEventListener(`DOMContentLoaded`, initialiseSlider);
+
+function initialiseSlider() {
+  if (slides.length > 0) {
+    slides[slideIndex].classList.add(`displaySlide`);
+    intervalId = setInterval(nextSlide, 5000);
   }
-
-  updateDisplay(choice, opponentChoice);
 }
 
-// Provides the counter choice.
-function choiceCounter(choice) {
-  switch (choice) {
-    case `rock`:
-      return `paper`;
-    case `paper`:
-      return `scissors`;
-    case `scissors`:
-      return `rock`;
+function showSlide(index) {
+  if (index >= slides.length) {
+    slideIndex = 0;
+  } else if (index < 0) {
+    slideIndex = slides.length - 1;
   }
+
+  slides.forEach((slide) => {
+    slide.classList.remove(`displaySlide`);
+  });
+  slides[slideIndex].classList.add(`displaySlide`);
 }
 
-// Updates the picks and score.
-function updateDisplay(choice, opponentChoice) {
-  playerDisplay.textContent = `Player: ${choice}`;
-  computerDisplay.textContent = `Computer: ${opponentChoice}`;
-  playerScoreDisplay.textContent = `Player:${playerScore}`;
-  computerScoreDisplay.textContent = `Computer: ${computerScore}`;
+function prevSlide() {
+  clearInterval(intervalId);
+  slideIndex--;
+  showSlide(slideIndex);
+}
+
+function nextSlide() {
+  slideIndex++;
+  showSlide(slideIndex);
 }
