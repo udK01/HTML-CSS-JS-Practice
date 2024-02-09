@@ -3018,32 +3018,32 @@ setInterval(updateDigitalClock, 1000);
 //   .then((data) => console.log(data))
 //   .catch((error) => console.error(error));
 
-async function fetchData() {
-  try {
-    const pokemonName = document
-      .getElementById(`pokemonName`)
-      .value.toLowerCase();
+// async function fetchData() {
+//   try {
+//     const pokemonName = document
+//       .getElementById(`pokemonName`)
+//       .value.toLowerCase();
 
-    const response = await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
-    );
+//     const response = await fetch(
+//       `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+//     );
 
-    if (!response.ok) {
-      throw new Error(`Could not fetch resource.`);
-    }
+//     if (!response.ok) {
+//       throw new Error(`Could not fetch resource.`);
+//     }
 
-    const data = await response.json();
+//     const data = await response.json();
 
-    const pokemonSprite = data.sprites.front_default;
-    const pokemonImg = document.getElementById(`pokemonSprite`);
+//     const pokemonSprite = data.sprites.front_default;
+//     const pokemonImg = document.getElementById(`pokemonSprite`);
 
-    console.log(pokemonSprite);
+//     console.log(pokemonSprite);
 
-    pokemonImg.src = pokemonSprite;
-    pokemonImg.style.display = `block`;
-  } catch (error) {
-    console.error(error);
-  }
-}
+//     pokemonImg.src = pokemonSprite;
+//     pokemonImg.style.display = `block`;
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 
 // fetchData();
