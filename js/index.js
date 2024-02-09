@@ -2905,3 +2905,42 @@ setInterval(updateDigitalClock, 1000);
 //------------------------------------------------------------------
 
 // Json Files
+
+// const jsonNames = `["Spongebob", "Patrick", "Sandy"]`;
+
+// const jsonPerson = `{
+//   "name": "Spongebob",
+//   "age": 30,
+//   "isEmployed": true,
+//   "hobbies": ["Jellyfishing", "karate", "cooking"]
+// }`;
+
+// const jsonPeople = `[{
+//   "name":"Spongebob",
+//   "age": 30,
+//   "isEmployed": true
+// }, {
+//   "name":"Patrick",
+//   "age": 34,
+//   "isEmployed": false
+// }, {
+//   "name":"Squidward",
+//   "age": 50,
+//   "isEmployed": true
+// }, {
+//   "name":"Sandy",
+//   "age": 27,
+//   "isEmployed": true
+// }]`;
+
+// const parsedData = JSON.parse(jsonPeople);
+// console.log(parsedData);
+
+// console.log(JSON.stringify(names));
+// console.log(JSON.stringify(person));
+// console.log(JSON.stringify(people));
+
+fetch("jsonFiles/people.json")
+  .then((response) => response.json())
+  .then((values) => values.forEach((value) => console.log(value)))
+  .catch((error) => console.error(error));
