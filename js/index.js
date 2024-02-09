@@ -3007,3 +3007,43 @@ setInterval(updateDigitalClock, 1000);
 //------------------------------------------------------------------
 
 // Fetch Data From An API.
+
+// fetch(`https://pokeapi.co/api/v2/pokemon/pikachu`)
+//   .then((response) => {
+//     if (!response.ok) {
+//       throw new Error();
+//     }
+//     return response.json();
+//   })
+//   .then((data) => console.log(data))
+//   .catch((error) => console.error(error));
+
+async function fetchData() {
+  try {
+    const pokemonName = document
+      .getElementById(`pokemonName`)
+      .value.toLowerCase();
+
+    const response = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+    );
+
+    if (!response.ok) {
+      throw new Error(`Could not fetch resource.`);
+    }
+
+    const data = await response.json();
+
+    const pokemonSprite = data.sprites.front_default;
+    const pokemonImg = document.getElementById(`pokemonSprite`);
+
+    console.log(pokemonSprite);
+
+    pokemonImg.src = pokemonSprite;
+    pokemonImg.style.display = `block`;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// fetchData();
