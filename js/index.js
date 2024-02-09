@@ -2940,7 +2940,70 @@ setInterval(updateDigitalClock, 1000);
 // console.log(JSON.stringify(person));
 // console.log(JSON.stringify(people));
 
-fetch("jsonFiles/people.json")
-  .then((response) => response.json())
-  .then((values) => values.forEach((value) => console.log(value)))
-  .catch((error) => console.error(error));
+// fetch("jsonFiles/people.json")
+//   .then((response) => response.json())
+//   .then((values) => values.forEach((value) => console.log(value)))
+//   .catch((error) => console.error(error));
+
+//------------------------------------------------------------------
+
+// Cookies
+
+// console.log(navigator.cookieEnabled);
+
+// document.cookie = `firstName = Patrick; expires=Sun, 1 January 2030 12:00:00 UTC; path=/`;
+// document.cookie = `lastName = Star; expires=Sun, 1 January 2030 12:00:00 UTC; path=/`;
+
+// console.log(document.cookie);
+
+// const firstText = document.querySelector(`#firstText`);
+// const lastText = document.querySelector(`#lastText`);
+// const submitBtn = document.querySelector(`#submitBtn`);
+// const cookieBtn = document.querySelector(`#cookieBtn`);
+
+// submitBtn.addEventListener(`click`, () => {
+//   setCookie(`firstName`, firstText.value, 365);
+//   setCookie(`lastName`, lastText.value, 365);
+// });
+
+// cookieBtn.addEventListener(`click`, () => {
+//   firstText.value = getCookie(`firstName`);
+//   lastText.value = getCookie(`lastName`);
+// });
+
+// function setCookie(name, value, expirationDate) {
+//   const date = new Date();
+//   date.setTime(date.getTime() + expirationDate * 24 * 60 * 60 * 1000);
+//   let expires = "expires=" + date.toUTCString();
+//   document.cookie = `${name}=${value}; ${expires}; path=/`;
+// }
+
+// function deleteCookie(name) {
+//   setCookie(name, null, null);
+// }
+
+// function getCookie(name) {
+//   const cookieDecoded = decodeURIComponent(document.cookie);
+//   const cookieArray = cookieDecoded.split("; ");
+//   let result = null;
+//   cookieArray.forEach((element) => {
+//     if (element.indexOf(name) === 0) {
+//       result = element.substring(name.length + 1);
+//     }
+//   });
+//   return result;
+// }
+
+// deleteCookie(`firstName`);
+// deleteCookie(`lastName`);
+
+// setCookie(`firstName`, `Spongebob`, 365);
+// setCookie(`lastName`, `SquarePants`, 365);
+// console.log(document.cookie);
+// console.log(getCookie(`firstName`));
+
+// console.log(document.cookie);
+
+//------------------------------------------------------------------
+
+// Fetch Data From An API.
