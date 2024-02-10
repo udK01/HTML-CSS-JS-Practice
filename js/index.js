@@ -3047,3 +3047,114 @@ setInterval(updateDigitalClock, 1000);
 // }
 
 // fetchData();
+
+//------------------------------------------------------------------
+
+// Final Project: Weather App
+
+const weatherForm = document.querySelector(`.weatherForm`);
+const cityInput = document.querySelector(`.cityInput`);
+const card = document.querySelector(`.card`);
+const apiKey = `API-KEY-PLACEHOLDER`;
+
+weatherForm.addEventListener(`submit`, async (event) => {
+  event.preventDefault();
+
+  const city = cityInput.value.toLowerCase();
+
+  if (city) {
+    try {
+      const weatherData = await getWeatherData(city);
+      displayWeatherData(weatherData);
+    } catch (error) {
+      displayError(error);
+    }
+  } else {
+    displayError(`Please enter a city!`);
+  }
+});
+
+async function getWeatherData(city) {
+  const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+  const response = await fetch(apiUrl);
+
+  if (!response.ok) {
+    throw new Error(`Could not fetch weather data.`);
+  }
+
+  return await response.json();
+}
+
+function displayWeatherData(data) {
+  deleteAllChildren(card);
+  // Create objects if they don't exist.
+  const cityDisplay = getOrCreateObject(`h1`, `cityDisplay`);
+  const tempDisplay = getOrCreateObject(`p`, `tempDisplay`);
+  const humidityDisplay = getOrCreateObject(`p`, `humidityDisplay`);
+  const descDisplay = getOrCreateObject(`p`, `descDisplay`);
+  const weatherEmoji = getOrCreateObject(`p`, `weatherEmoji`);
+
+  cityDisplay.textContent = data.name;
+  tempDisplay.textContent = `${(data.main.temp - 273.15).toFixed(1)}°C`;
+  humidityDisplay.textContent = `${data.main.humidity}%`;
+  descDisplay.textContent = data.weather[0].description;
+  weatherEmoji.textContent = getWeatherEmoji(data.weather[0].id);
+
+  card.appendChild(cityDisplay);
+  card.appendChild(tempDisplay);
+  card.appendChild(humidityDisplay);
+  card.appendChild(descDisplay);
+  card.appendChild(weatherEmoji);
+  card.style.display = `flex`;
+}
+
+function getWeatherEmoji(weatherId) {
+  switch (true) {
+    case weatherId >= 200 && weatherId < 300:
+      return "☁️";
+    case weatherId >= 300 && weatherId < 400:
+      return "☁️";
+    case weatherId >= 500 && weatherId < 600:
+      return "☁️";
+    case weatherId >= 600 && weatherId < 700:
+      return "❄️";
+    case weatherId >= 700 && weatherId < 800:
+      return "🌫️";
+    case weatherId === 800:
+      return "🌞";
+    case weatherId >= 801 && weatherId < 810:
+      return "☁️";
+    default:
+      "❓";
+  }
+}
+
+function displayError(message) {
+  deleteAllChildren(card);
+  let paragraph = document.createElement(`p`);
+  paragraph.textContent = message;
+  paragraph.classList = `errorDisplay`;
+  card.appendChild(paragraph);
+  card.style.display = `block`;
+}
+
+function getOrCreateObject(type, objectClass) {
+  // Make new object or return existing.
+  const object = !document.querySelector(`.${objectClass}`)
+    ? document.createElement(type)
+    : document.querySelector(`.${objectClass}`);
+
+  // Add classList to new object.
+  if (object.classList != objectClass) {
+    object.classList = objectClass;
+  }
+
+  return object;
+}
+
+function deleteAllChildren(element) {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+}
